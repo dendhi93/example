@@ -15,8 +15,7 @@ object Constants{
     /**
      * KEY Features
      */
-    const val KEY_URL_LAUNDRY = 566
-    const val KEY_URL_LAUNDRY_DEV = 567
+    const val KEY_URL_1 = 566
 
     /**
      * Key Messages

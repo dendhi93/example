@@ -13,6 +13,10 @@
     <string name="permission_rationale_settings_button_text">PENGATURAN</string>
     <string name="all_permissions_denied_feedback">Seluruh izin dibutuhkan</string>
 
+    //notif
+    <string name="no_connection_2">Handset anda tidak terkoneksi dengan Internet. Mohon cek koneksi anda</string>
+    <string name="validate_data">Mohon diisi data yang kosong</string>
+
     //button
     <string name="login">LOGIN</string>
 

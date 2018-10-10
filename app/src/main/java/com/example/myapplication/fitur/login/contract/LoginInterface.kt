@@ -4,4 +4,5 @@ interface LoginInterface{
 
     fun onShowMessage(messages: String)
     fun onShowDialog(messages: String, keyAction: Int)
+    fun onIntent()
 }
