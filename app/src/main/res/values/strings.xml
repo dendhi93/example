@@ -21,6 +21,13 @@
     <string name="login">LOGIN</string>
 
     //content_form
-    <string name="username">Username</string>
+    <string name="username">Email</string>
     <string name="password">Password</string>
+
+    //menu
+    <string name="home_menu">Home</string>
+    <string name="user_menu">Profile</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -9,6 +9,7 @@ import com.example.myapplication.application.BaseApplication
 import com.example.myapplication.fitur.login.LoginActivity
 import com.example.myapplication.fitur.login.contract.LoginInterface
 import com.example.myapplication.connection.*
+import java.util.regex.Pattern
 
 class LoginViewModel(val context: Context, val callback: LoginInterface){
 
@@ -21,7 +22,8 @@ class LoginViewModel(val context: Context, val callback: LoginInterface){
 
     fun processLogin(){
         when{
-            userName.get().isNullOrEmpty() || password.get().isNullOrEmpty() -> callback.onShowMessage(context.getString(R.string.validate_data))
+            userName?.get().isNullOrEmpty() || password?.get().isNullOrEmpty() -> callback.onShowMessage(context.getString(R.string.validate_data))
+            !emailFormat(userName?.get()!!.trim()) -> callback.onShowMessage("Format Email tidak sesusi")
             else ->{
                 when {
                     Connection.isNetworkAvailable(context) -> {
@@ -44,5 +46,12 @@ class LoginViewModel(val context: Context, val callback: LoginInterface){
         }
 
     }
+
+    private fun emailFormat(email: String): Boolean {
+            val expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$"
+            val pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE)
+            val matcher = pattern.matcher(email)
+            return matcher.matches()
+        }
 
 }
