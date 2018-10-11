@@ -22,8 +22,8 @@ class LoginViewModel(val context: Context, val callback: LoginInterface){
 
     fun processLogin(){
         when{
-            userName?.get().isNullOrEmpty() || password?.get().isNullOrEmpty() -> callback.onShowMessage(context.getString(R.string.validate_data))
-            !emailFormat(userName?.get()!!.trim()) -> callback.onShowMessage("Format Email tidak sesusi")
+            userName.get().isNullOrEmpty() || password.get().isNullOrEmpty() -> callback.onShowMessage(context.getString(R.string.validate_data))
+            !emailFormat(userName.get().toString().trim()) -> callback.onShowMessage("Format Email tidak sesusi")
             else ->{
                 when {
                     Connection.isNetworkAvailable(context) -> {
