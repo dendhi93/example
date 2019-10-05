@@ -1,101 +1,51 @@
 apply plugin: 'com.android.application'
-
-apply plugin: 'kotlin-android'
-
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'realm-android'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.myapplication"
-        minSdkVersion 23
-        dataBinding.enabled = true
-        targetSdkVersion 27
+        applicationId "com.papuase.zeerovers.tm"
+        minSdkVersion 19
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-
-    signingConfigs {
-        release {
-            storeFile file('../MobApps.jks')
-            storePassword 'MobApps_2018'
-            keyAlias 'key_mobapps2018'
-            keyPassword 'MobApps_2018'
-        }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
-
     buildTypes {
         release {
-            debuggable true
-            minifyEnabled true
-            shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    productFlavors {
     }
 }
 
-repositories {
-    maven { url "https://maven.google.com" }
-    maven { url "https://jitpack.io" }
-    mavenCentral()
-    maven { url "https://maven.fabric.io/public" }
-}
-
-ext {
-    supportLibVersion = '27.1.1'
-    retrofitLibVersion = '2.2.0'
-}
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    //kotlin lib
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-
-    // Standart Library
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
-    implementation "com.android.support:appcompat-v7:${supportLibVersion}"
-    implementation "com.android.support:design:${supportLibVersion}"
-    implementation "com.android.support:cardview-v7:${supportLibVersion}"
-    implementation "com.android.support:support-v4:${supportLibVersion}"
-    implementation 'com.google.code.gson:gson:2.8.1'
-
-    // Databinding Library
-    implementation 'com.android.support:support-v4:27.1.1'
-
-    // Connection Library
-    implementation "com.squareup.retrofit2:retrofit:${retrofitLibVersion}"
-    implementation "com.squareup.retrofit2:converter-gson:${retrofitLibVersion}"
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.0'
-
-    // Google
-    implementation 'com.google.android.gms:play-services-location:15.0.1'
-    implementation 'com.google.android.gms:play-services-maps:15.0.1'
-
-    // Custom Library
-    implementation 'com.karumi:dexter:4.1.0'
-
-    // MultiPermission Library
-    implementation 'com.daimajia.slider:library:1.1.5@aar'
-
-    //toast
-    implementation 'com.sdsmdg.tastytoast:tastytoast:0.1.1'
-    //multidex
-    implementation 'com.android.support:multidex:1.0.3'
-
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    //----- ShowPassword
+    implementation 'com.github.scottyab:showhidepasswordedittext:0.8'
+    //----- Image circle
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //    implementation 'com.android.volley:volley:1.1.0'
+    implementation 'com.mcxiaoke.volley:library:1.0.19'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+    //----- RecyclerView
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
+    //---------Toasty
+    implementation 'com.github.GrenderG:Toasty:1.4.0'
+    implementation 'com.facebook.shimmer:shimmer:0.2.0'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-    //google
-    implementation 'com.google.android.gms:play-services-location:12.0.1'
-
-    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
-    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
-
-    //RXJava
-    implementation 'io.reactivex:rxkotlin:2.0.0-RC1'
+    androidTestImplementation 'androidx.test:runner:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
 }
