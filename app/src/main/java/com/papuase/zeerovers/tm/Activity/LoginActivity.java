@@ -3,7 +3,6 @@ package com.papuase.zeerovers.tm.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
@@ -11,6 +10,8 @@ import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -34,12 +35,10 @@ import es.dmoral.toasty.Toasty;
 public class LoginActivity extends AppCompatActivity {
 
     private static final String TAG = "LoginActivity";
-
-
 //    int counter = 0;
 
     private EditText mUsernameEditText;
-    private ShowHidePasswordEditText mPasswordEditText;
+    private EditText mPasswordEditText;
     private ProgressDialog pDialog;
     private String ResultWS;
     private SharedPrefManager sharedPrefManager;
@@ -49,8 +48,8 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mUsernameEditText = findViewById(R.id.etUserName);
-        mPasswordEditText = findViewById(R.id.etPassword);
+        mUsernameEditText = findViewById(R.id.txt_login_un);
+        mPasswordEditText = findViewById(R.id.txt_login_pass);
 
         // Initialize the SharedPreferences
         sharedPrefManager = new SharedPrefManager(this);

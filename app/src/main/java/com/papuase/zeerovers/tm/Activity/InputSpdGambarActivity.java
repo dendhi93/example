@@ -14,9 +14,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.provider.MediaStore;
 import android.provider.OpenableColumns;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Base64;
 import android.util.Log;
 import android.view.MenuItem;
@@ -28,6 +25,8 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -151,8 +150,6 @@ public class InputSpdGambarActivity extends AppCompatActivity {
         idFile = in.getStringExtra("idFile");
         replaceAll = in.getStringExtra("nameFoto");
         urlFoto = in.getStringExtra("urlFoto");
-
-
 
         Log.i(TAG, "intentGetExtra: " + noTask+"/"+ vid);
         Log.i(TAG, "intentGetExtra: " + jenisBiaya+"/"+ nominal +"/"+tglInputBiaya+"/"+ catatanTransaksi +"/"+urlFoto);

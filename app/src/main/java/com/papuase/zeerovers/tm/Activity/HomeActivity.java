@@ -8,22 +8,23 @@ import android.content.pm.PackageManager;
 import android.location.LocationManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.design.widget.BottomNavigationView;
-import android.support.design.widget.NavigationView;
-import androidx.core.app.Fragment;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
-import androidx.core.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.Fragment;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 import com.papuase.zeerovers.tm.Fragment.SpdFragment;
 import com.papuase.zeerovers.tm.Fragment.TaskFragment;
 import com.papuase.zeerovers.tm.R;
@@ -86,8 +87,6 @@ public class HomeActivity extends AppCompatActivity {
         showFragment(new TaskFragment());
         statusCheck();
 
-
-
         drawerLayout = findViewById(R.id.nav_drawer);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
 
@@ -149,11 +148,8 @@ public class HomeActivity extends AppCompatActivity {
             drawerLayout.closeDrawer(GravityCompat.START);
             return true;
 
-
             }
         });
-
-
 
     }
 

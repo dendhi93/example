@@ -2,12 +2,13 @@ package com.papuase.zeerovers.tm.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.TabLayout;
-import androidx.core.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.tabs.TabLayout;
 import com.papuase.zeerovers.tm.Adapter.SectionsPageAdapter;
 import com.papuase.zeerovers.tm.Fragment.BarangRusakFragment;
 import com.papuase.zeerovers.tm.Fragment.BarangTerpasangFragment;
