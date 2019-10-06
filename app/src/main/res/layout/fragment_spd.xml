@@ -8,7 +8,7 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:visibility="gone"
         android:id="@+id/rvCardHorizontal"
         android:layout_width="match_parent"
@@ -202,7 +202,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:layout_marginTop="10dp"
             android:id="@+id/rvCardVertical"
             android:layout_width="match_parent"
@@ -232,7 +232,5 @@
             android:text="Retry"/>
 
     </LinearLayout>
-
-
 
 </LinearLayout>

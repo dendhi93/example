@@ -103,7 +103,7 @@
 
 
         <!-- TODO: Update blank fragment layout -->
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:visibility="gone"
             android:id="@+id/rvCardHorizontal"
             android:layout_gravity="center_horizontal"
@@ -114,7 +114,7 @@
             android:id="@+id/task_frame"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <android.support.v7.widget.RecyclerView
+            <androidx.recyclerview.widget.RecyclerView
                 android:layout_marginTop="10dp"
                 android:id="@+id/rvCardListTask"
                 android:layout_width="match_parent"

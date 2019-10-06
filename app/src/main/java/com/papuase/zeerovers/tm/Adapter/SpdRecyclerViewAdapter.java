@@ -2,7 +2,6 @@ package com.papuase.zeerovers.tm.Adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +11,8 @@ import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.papuase.zeerovers.tm.Activity.SpdListActivity;
 import com.papuase.zeerovers.tm.Model.ListSpdModel;
