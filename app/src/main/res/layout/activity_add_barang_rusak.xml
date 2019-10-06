@@ -16,7 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -31,12 +32,14 @@
                     android:hint="Nama Barang"
                     android:inputType="textAutoComplete"
                     android:maxLength="50"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -48,14 +51,16 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:fontFamily="@font/ubuntu_r"
-                    android:hint="ESNO Model"
+                    android:hint="Model"
                     android:inputType="textAutoComplete"
                     android:maxLength="50"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 android:layout_marginTop="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -70,9 +75,10 @@
                     android:hint="Serial Number"
                     android:inputType="textAutoComplete"
                     android:maxLength="50"
+                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="10dp"
