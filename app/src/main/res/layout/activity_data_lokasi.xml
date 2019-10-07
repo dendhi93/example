@@ -141,10 +141,10 @@
                             android:layout_weight="1"
                             android:layout_height="wrap_content">
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical">
+                                android:layout_height="wrap_content">
 
                                 <EditText
                                     android:id="@+id/kanwil"
@@ -154,12 +154,12 @@
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/ubuntu_r"
                                     android:hint="Kanwil"
-                                    android:textColor="@android:color/black"
-                                    android:inputType="text"
+                                    android:inputType="textAutoComplete"
                                     android:maxLength="50"
+                                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
                         </LinearLayout>
 
@@ -168,10 +168,10 @@
                             android:layout_weight="1"
                             android:layout_height="wrap_content">
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical">
+                                android:layout_height="wrap_content">
 
                                 <EditText
                                     android:id="@+id/kancaInduk"
@@ -182,20 +182,20 @@
                                     android:fontFamily="@font/ubuntu_r"
                                     android:hint="Kanca Induk / Area"
                                     android:inputType="text"
-                                    android:textColor="@android:color/black"
                                     android:maxLength="50"
+                                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
                         </LinearLayout>
 
                     </LinearLayout>
 
-                    <android.support.design.widget.TextInputLayout
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical">
+                        android:layout_height="wrap_content">
 
                         <EditText
                             android:id="@+id/namaPic"
@@ -208,14 +208,15 @@
                             android:textColor="@android:color/black"
                             android:inputType="text"
                             android:maxLength="50"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    </android.support.design.widget.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <android.support.design.widget.TextInputLayout
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical">
+                        android:layout_height="wrap_content">
 
                         <EditText
                             android:id="@+id/phonePic"
@@ -228,9 +229,10 @@
                             android:textColor="@android:color/black"
                             android:inputType="number"
                             android:maxLength="50"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    </android.support.design.widget.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <android.support.design.widget.TextInputLayout
                         android:layout_marginTop="5dp"
