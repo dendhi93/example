@@ -22,10 +22,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/diameter_antena"
@@ -36,12 +36,12 @@
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Diameter Antena"
                         android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
@@ -50,31 +50,31 @@
                     android:layout_height="wrap_content"
                     android:text="Arah Sudut Antena :"/>
 
-                <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical">
-
-                <EditText
-                    android:id="@+id/polarisasi"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentTop="true"
-                    android:fontFamily="@font/ubuntu_r"
-                    android:hint="Polarisasi"
-                    android:textColor="@android:color/black"
-                    android:text=""
-                    android:inputType="textAutoComplete"
-                    android:maxLength="50"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+                    android:layout_height="wrap_content">
 
-                </android.support.design.widget.TextInputLayout>
+                    <EditText
+                        android:id="@+id/polarisasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/ubuntu_r"
+                        android:hint="Polarisasi"
+                        android:textColor="@android:color/black"
+                        android:inputType="textAutoComplete"
+                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
+                        android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                <android.support.design.widget.TextInputLayout
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/elevasi"
@@ -85,17 +85,17 @@
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Elevasi"
                         android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/azimuth"
@@ -106,12 +106,12 @@
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Azimuth"
                         android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
@@ -164,7 +164,8 @@
                         android:textColor="@android:color/black"
                         android:layout_height="wrap_content"/>
 
-                    <android.support.design.widget.TextInputLayout
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_marginBottom="5dp"
@@ -179,13 +180,12 @@
                             android:layout_alignParentTop="true"
                             android:fontFamily="@font/ubuntu_r"
                             android:hint="KVA"
-                            android:textColor="@android:color/black"
-                            android:text=""
                             android:inputType="textAutoComplete"
                             android:maxLength="50"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    </android.support.design.widget.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
@@ -204,10 +204,10 @@
                     android:textColor="@android:color/black"
                     android:layout_height="wrap_content"/>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/ip_management"
@@ -217,18 +217,17 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="VSAT Management IP Address"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/receive_symbole"
@@ -238,13 +237,12 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Receive Symbole Rate"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
