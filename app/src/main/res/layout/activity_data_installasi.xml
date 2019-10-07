@@ -485,10 +485,10 @@
 
                 </TableLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/satelite_longitude"
@@ -498,13 +498,12 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Satelite Longitude"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
@@ -513,10 +512,12 @@
                     android:layout_height="wrap_content"
                     android:text="LAN-1 IP Address"/>
 
-                <android.support.design.widget.TextInputLayout
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/ip_lan"
@@ -526,19 +527,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="IP LAN"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/subnet_mask"
@@ -548,13 +548,12 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Subnet Mask"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
@@ -563,10 +562,11 @@
                     android:layout_height="wrap_content"
                     android:text="LAN-2 IP Address"/>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/ip_lan2"
@@ -576,19 +576,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="IP LAN"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_marginTop="5dp"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/subnet_mask2"
@@ -598,13 +597,12 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Subnet Mask"
-                        android:textColor="@android:color/black"
-                        android:text=""
                         android:inputType="textAutoComplete"
                         android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
