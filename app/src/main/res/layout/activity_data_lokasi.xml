@@ -27,10 +27,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <android.support.design.widget.TextInputLayout
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical">
+                        android:layout_height="wrap_content">
 
                         <EditText
                             android:id="@+id/namaRemote"
@@ -40,17 +40,17 @@
                             android:layout_alignParentTop="true"
                             android:fontFamily="@font/ubuntu_r"
                             android:hint="NamaRemote"
-                            android:inputType="text"
-                            android:textColor="@android:color/black"
+                            android:inputType="textAutoComplete"
                             android:maxLength="50"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    </android.support.design.widget.TextInputLayout>
+                    </com.google.android.material.textfield.TextInputLayout>
 
-                    <android.support.design.widget.TextInputLayout
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical">
+                        android:layout_height="wrap_content">
 
                         <EditText
                             android:id="@+id/alamatInstall"
@@ -60,13 +60,12 @@
                             android:layout_alignParentTop="true"
                             android:fontFamily="@font/ubuntu_r"
                             android:hint="Alamat"
-                            android:textColor="@android:color/black"
-                            android:inputType="text"
+                            android:inputType="textAutoComplete"
                             android:maxLength="50"
+                            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                    </android.support.design.widget.TextInputLayout>
-
+                    </com.google.android.material.textfield.TextInputLayout>
 
                     <LinearLayout
                         android:layout_marginTop="5dp"
@@ -74,16 +73,15 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
-
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content">
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical">
+                                android:layout_height="wrap_content">
 
                                 <EditText
                                     android:id="@+id/provinsi"
@@ -93,12 +91,12 @@
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/ubuntu_r"
                                     android:hint="Provinsi"
-                                    android:textColor="@android:color/black"
-                                    android:inputType="text"
+                                    android:inputType="textAutoComplete"
                                     android:maxLength="50"
+                                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
                         </LinearLayout>
 
@@ -107,10 +105,10 @@
                             android:layout_weight="1"
                             android:layout_height="wrap_content">
 
-                            <android.support.design.widget.TextInputLayout
+                            <com.google.android.material.textfield.TextInputLayout
+                                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical">
+                                android:layout_height="wrap_content">
 
                                 <EditText
                                     android:id="@+id/kabupaten"
@@ -120,12 +118,12 @@
                                     android:layout_alignParentTop="true"
                                     android:fontFamily="@font/ubuntu_r"
                                     android:hint="Kabupaten"
-                                    android:textColor="@android:color/black"
-                                    android:inputType="text"
+                                    android:inputType="textAutoComplete"
                                     android:maxLength="50"
+                                    android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                                     android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                            </android.support.design.widget.TextInputLayout>
+                            </com.google.android.material.textfield.TextInputLayout>
 
                         </LinearLayout>
 
