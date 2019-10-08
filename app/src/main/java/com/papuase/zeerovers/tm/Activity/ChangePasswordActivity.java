@@ -33,8 +33,7 @@ import es.dmoral.toasty.Toasty;
 
 public class ChangePasswordActivity extends AppCompatActivity {
 
-    private EditText mEmail, mNikUser;
-    private ShowHidePasswordEditText mNewPassword;
+    private EditText mEmail, mNikUser,mNewPassword;
     private Button mbtnSave;
     private String ResultWS;
 
