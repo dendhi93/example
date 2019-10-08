@@ -149,10 +149,10 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/tempat_antena"
@@ -162,18 +162,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Tempat Antena"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/kekuatan_roof"
@@ -183,18 +183,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Kekuatan Roof"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/jenis_mounting_antena"
@@ -204,18 +204,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Jenis Mounting Antena"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/latitude"
@@ -228,15 +228,15 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/longitude"
@@ -249,15 +249,15 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/pengukuran_listrik_awal"
@@ -270,15 +270,15 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/sarana_pendukung_ac_indoor"
@@ -291,15 +291,15 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/sarana_pendukung_ups"
@@ -312,15 +312,15 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/panjang_kabel"
@@ -333,10 +333,10 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
