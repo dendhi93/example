@@ -22,10 +22,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/no_task"
@@ -38,15 +38,15 @@
                         android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/no_vid"
@@ -56,18 +56,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="VID"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/no_sid"
@@ -77,18 +77,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="SID"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/ip_lan"
@@ -98,19 +98,18 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="IP LAN"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/id_atm"
@@ -121,16 +120,17 @@
                         android:fontFamily="@font/ubuntu_r"
                         android:textColor="@android:color/black"
                         android:hint="ID ATM"
+                        android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/laporan_pengaduan"
@@ -140,19 +140,17 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Laporan Pengaduan"
-                        android:textColor="@android:color/black"
                         android:text=""
                         android:inputType="textAutoComplete"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/status_check_koordinator"
@@ -162,17 +160,17 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Status Check Koordinator"
+                        android:text=""
                         android:inputType="textAutoComplete"
-                        android:textColor="@android:color/black"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/order"
@@ -182,17 +180,17 @@
                         android:layout_alignParentTop="true"
                         android:fontFamily="@font/ubuntu_r"
                         android:hint="Order"
+                        android:text=""
                         android:inputType="textAutoComplete"
-                        android:textColor="@android:color/black"
-                        android:maxLength="50"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <com.papuase.zeerovers.tm.Helper.DatePickerView
                         android:id="@+id/tgl_berangkat"
@@ -206,12 +204,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <com.papuase.zeerovers.tm.Helper.DatePickerView
                         android:id="@+id/tgl_selesai"
@@ -225,12 +223,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <com.papuase.zeerovers.tm.Helper.DatePickerView
                         android:id="@+id/tgl_pulang"
@@ -244,12 +242,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <com.papuase.zeerovers.tm.Helper.DatePickerView
                         android:id="@+id/tgl_status_perbaikan"
@@ -263,13 +261,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
-                    android:visibility="gone"
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <com.papuase.zeerovers.tm.Helper.DatePickerView
                         android:layout_width="match_parent"
@@ -282,12 +279,12 @@
                         android:textColor="@android:color/black"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/catatan_koordinator"
@@ -305,9 +302,10 @@
                         android:scrollbars="vertical"
                         android:padding="8dp"
                         android:textColor="@android:color/black"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <RelativeLayout
                     android:layout_marginTop="10dp"
@@ -330,8 +328,6 @@
                 </RelativeLayout>
 
             </LinearLayout>
-
-
 
         </ScrollView>
     </RelativeLayout>
