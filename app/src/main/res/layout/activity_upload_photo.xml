@@ -59,7 +59,6 @@
                 android:onClick="choseImg"
                 android:src="@drawable/camera"/>
 
-
         </LinearLayout>
 
     </LinearLayout>
@@ -69,11 +68,10 @@
         android:layout_height="1.5dp"
         android:background="@color/colorGrey500"/>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="10dp"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical">
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/etDescrip"
@@ -85,15 +83,16 @@
             android:hint="Descripsi"
             android:inputType="textAutoComplete"
             android:maxLength="50"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_marginTop="10dp"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical">
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
 
         <EditText
             android:id="@+id/etKeterangan"
@@ -105,9 +104,10 @@
             android:hint="Keterangan"
             android:inputType="textAutoComplete"
             android:maxLength="50"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789qwertyuiopasdfghjklzxcvbnm/_,.()!? "
             android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <RelativeLayout
