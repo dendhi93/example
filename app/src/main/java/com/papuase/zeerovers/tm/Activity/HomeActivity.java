@@ -50,22 +50,19 @@ public class HomeActivity extends AppCompatActivity {
     final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            switch (item.getItemId()) {
-                case R.id.navigation_home:
-                    showFragment(new TaskFragment());
-                    setTitle(R.string.title_task);
-                    return true;
-                case R.id.navigation_dashboard:
-                    showFragment(new SpdFragment());
-                    setTitle(R.string.title_spd);
-                    return true;
-            }
-            return false;
-        }
-    };
+            = item -> {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        showFragment(new TaskFragment());
+                        setTitle(R.string.title_task);
+                        return true;
+                    case R.id.navigation_dashboard:
+                        showFragment(new SpdFragment());
+                        setTitle(R.string.title_spd);
+                        return true;
+                }
+                return false;
+            };
 
     private void showFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction()
@@ -96,22 +93,15 @@ public class HomeActivity extends AppCompatActivity {
 
 
         mHelp = findViewById(R.id.help);
-        mHelp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toasty.info(HomeActivity.this, "Help and FAQ.", Toast.LENGTH_SHORT, true).show();
-                drawerLayout.closeDrawer(GravityCompat.START);
-            }
-
+        mHelp.setOnClickListener(v -> {
+            Toasty.info(HomeActivity.this, "Help and FAQ.", Toast.LENGTH_SHORT, true).show();
+            drawerLayout.closeDrawer(GravityCompat.START);
         });
 
         mLogOut = findViewById(R.id.log_out);
-        mLogOut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                logout();
-                drawerLayout.closeDrawer(GravityCompat.START);
-            }
+        mLogOut.setOnClickListener(v -> {
+            logout();
+            drawerLayout.closeDrawer(GravityCompat.START);
         });
 
 
