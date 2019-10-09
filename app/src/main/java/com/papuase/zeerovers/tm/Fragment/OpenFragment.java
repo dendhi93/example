@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.android.volley.NetworkResponse;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -51,6 +52,7 @@ public class OpenFragment extends Fragment {
     TextView mDataNull;
     ProgressBar mProgress;
     Button mRerty;
+    int successCode = 0;
 
 
     FrameLayout frameLayout;
@@ -206,6 +208,11 @@ public class OpenFragment extends Fragment {
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
+                        if (successCode == 401){
+                            mDataNull.setText("Mohon tanyakan support anda");
+                        }else {
+                            mDataNull.setText("Cek Jaringan anda");
+                        }
 //                        mProgress.setVisibility(View.GONE);
                         recyclerView.setVisibility(View.GONE);
                         error.getMessage();
@@ -213,7 +220,6 @@ public class OpenFragment extends Fragment {
                         mDataNull.setVisibility(View.VISIBLE);
                         mRerty.setVisibility(View.VISIBLE);
                         recyclerView.setVisibility(View.GONE);
-                        mDataNull.setText("Cek Jaringan anda");
                     }
                 }){
                 @Override
@@ -221,6 +227,12 @@ public class OpenFragment extends Fragment {
                     HashMap<String, String> headers = new HashMap<>();
                     headers.put("Header", "Dota2");
                     return headers;
+            }
+
+            @Override
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+                successCode = response.statusCode;
+                return super.parseNetworkResponse(response);
             }
         };
 

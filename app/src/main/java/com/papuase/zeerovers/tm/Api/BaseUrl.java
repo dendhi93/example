@@ -24,7 +24,6 @@ public class BaseUrl {
     public static final String digunakan = "vsat-api2/Service1.svc/Api-SPD/QueryTotalPenggunaan/";
     public static final String sisa = "vsat-api2/Service1.svc/Api-SPD/QuerySisaUang/";
 
-
     public static final String listSpd = "papua-apps-api-master/web/api/QueryTaskSPD/";
     public static final String listSpdVid = "vsat-api2/Service1.svc/Api-SPD/QueryTaskVID/";
     public static final String listSpdVidGambar = "vsat-api2/Service1.svc/Api-AddClass1/ListSPDAndGambar/";
