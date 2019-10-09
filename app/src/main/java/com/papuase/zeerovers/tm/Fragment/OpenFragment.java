@@ -62,8 +62,6 @@ public class OpenFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_open,container, false);
 
-
-
         recyclerView = view.findViewById(R.id.rvCardListOpen);
         sharedPrefManager = new SharedPrefManager(getActivity());
 
@@ -71,11 +69,7 @@ public class OpenFragment extends Fragment {
         mDataNull = view.findViewById(R.id.tvDataKosongOpen);
         mRerty = view.findViewById(R.id.btnRetryOpen);
 
-
-
-
         new AsyingTaskList().execute();
-
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
         recyclerView.setLayoutManager(layoutManager);
@@ -147,6 +141,7 @@ public class OpenFragment extends Fragment {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
+                        Log.d("###",""+response);
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
@@ -155,7 +150,7 @@ public class OpenFragment extends Fragment {
                                     JSONObject jsonObj = new JSONObject(response);
                                     String ResultWS = jsonObj.getString("Result");
 
-                                    if (ResultWS.equals("True")) {
+                                    if (ResultWS.equals("true")) {
                                         JSONArray jsonArray = jsonObj.getJSONArray("Raw");
                                         Log.d("TAG", "onResponse: " + jsonArray);
                                         for (int i = 0; i < jsonArray.length(); i++) {
@@ -184,11 +179,10 @@ public class OpenFragment extends Fragment {
                                         }
                                         mAdapter.notifyDataSetChanged();
 
-
                                     }else {
                                         mProgress.setVisibility(View.GONE);
                                         recyclerView.setVisibility(View.GONE);
-//                                        String Responsecode = jsonObj.getString("Data1");
+//                                        String Responsecode = jsonObj.getString("Raw");
                                         String Responsecode = "Data Task Tidak Ada";
                                         mDataNull.setVisibility(View.VISIBLE);
                                         mRerty.setVisibility(View.GONE);
@@ -231,6 +225,7 @@ public class OpenFragment extends Fragment {
         };
 
         Mysingleton.getInstance(getContext()).addToRequestQueue(request);
+        mProgress.setVisibility(View.GONE);
     }
 
 }

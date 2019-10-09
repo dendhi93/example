@@ -109,7 +109,6 @@ public class HomeActivity extends AppCompatActivity {
         String useremail = sharedPrefManager.getSpEmail();
 
 
-
         BottomNavigationView navigation = findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 

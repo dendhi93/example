@@ -83,20 +83,14 @@ public class TaskFragment extends Fragment {
         new AsyingTask().execute();
         showFragment(new OpenFragment());
 
-        mOpen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showFragment(new OpenFragment());
-                recyclerView.setVisibility(View.VISIBLE);
-            }
+        mOpen.setOnClickListener(v -> {
+            showFragment(new OpenFragment());
+            recyclerView.setVisibility(View.VISIBLE);
         });
 
-        mFinish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showFragment(new FinishFragment());
-                recyclerView.setVisibility(View.GONE);
-            }
+        mFinish.setOnClickListener(v -> {
+            showFragment(new FinishFragment());
+            recyclerView.setVisibility(View.GONE);
         });
 
         mStatusOpen.setVisibility(View.VISIBLE);
@@ -151,64 +145,53 @@ public class TaskFragment extends Fragment {
         Log.i(TAG, "getStatusOpen URL: " +url);
 
         StringRequest request = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
+                response -> new Handler().postDelayed(new Runnable() {
                     @Override
-                    public void onResponse(String response) {
-                        new Handler().postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                try {
-                                    JSONObject jsonObj = new JSONObject(response);
-                                    ResultWS = jsonObj.getString("Result");
-                                    Log.i(TAG, "jsonObj StatusOpen : " +jsonObj);
-                                    if (ResultWS.equals("True")) {
-                                        JSONArray jsonArray = jsonObj.getJSONArray("Raw");
-                                        Log.d("TAG", "onResponse: " + jsonArray);
-                                        for (int i = 0; i < jsonArray.length(); i++) {
-                                            JSONObject data = jsonArray.getJSONObject(i);
+                    public void run() {
+                        try {
+                            JSONObject jsonObj = new JSONObject(response);
+                            ResultWS = jsonObj.getString("Result");
+                            Log.i(TAG, "jsonObj StatusOpen : " +jsonObj);
+                            if (ResultWS.equals("true")) {
+                                JSONArray jsonArray = jsonObj.getJSONArray("Raw");
+                                Log.d("TAG", "onResponse: " + jsonArray);
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    JSONObject data = jsonArray.getJSONObject(i);
 
-                                            Log.i(TAG, "countOpen: " + data.getString("tot"));
-                                            Log.i(TAG, "countOpen: " + data.getString("Status"));
+                                    Log.i(TAG, "countOpen: " + data.getString("tot"));
+                                    Log.i(TAG, "countOpen: " + data.getString("Status"));
 
-                                            Log.d(TAG, "getData: " + data);
+                                    Log.d(TAG, "getData: " + data);
 
 
-                                            final String countOpen = data.getString("tot");
-                                            final String statusOpen = data.getString("Status");
-                                            mStatusOpen.setText(statusOpen);
-                                            mCountOpen.setText(countOpen);
-                                        }
-                                        mAdapter.notifyDataSetChanged();
-                                        mStatusOpen.setVisibility(View.VISIBLE);
-                                        mCountOpen.setVisibility(View.VISIBLE);
-                                        mStatusFinish.setVisibility(View.VISIBLE);
-                                        mCountFinish.setVisibility(View.VISIBLE);
-
-                                    }else {
-                                        mStatusOpen.setVisibility(View.VISIBLE);
-                                        mCountOpen.setVisibility(View.VISIBLE);
-                                        mStatusFinish.setVisibility(View.VISIBLE);
-                                        mCountFinish.setVisibility(View.VISIBLE);
-                                    }
-
-                                } catch (JSONException e) {
-                                    e.printStackTrace();
-
+                                    final String countOpen = data.getString("tot");
+                                    final String statusOpen = data.getString("Status");
+                                    mStatusOpen.setText(statusOpen);
+                                    mCountOpen.setText(countOpen);
                                 }
+                                mAdapter.notifyDataSetChanged();
+                                mStatusOpen.setVisibility(View.VISIBLE);
+                                mCountOpen.setVisibility(View.VISIBLE);
+                                mStatusFinish.setVisibility(View.VISIBLE);
+                                mCountFinish.setVisibility(View.VISIBLE);
 
+                            }else {
+                                mStatusOpen.setVisibility(View.VISIBLE);
+                                mCountOpen.setVisibility(View.VISIBLE);
+                                mStatusFinish.setVisibility(View.VISIBLE);
+                                mCountFinish.setVisibility(View.VISIBLE);
                             }
-                        }, 20);
 
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+
+                        }
                     }
+                }, 20),
+                error -> {
+                    error.getMessage();
+                    Log.i("TAG", "onErrorResponse: " + error.getMessage());
 
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        error.getMessage();
-                        Log.i("TAG", "onErrorResponse: " + error.getMessage());
-
-                    }
                 }){
             @Override
             public Map<String, String> getHeaders() {

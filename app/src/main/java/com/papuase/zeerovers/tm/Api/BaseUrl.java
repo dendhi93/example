@@ -12,11 +12,11 @@ public class BaseUrl {
     public static final String forgetPassword = "vsat-api2/Service1.svc/Api-Login/forgotPass/";
     public static final String profileTeknisi = "vsat-api2/Service1.svc/Api-Login/profileTeknisi/233029703";
 
-    public static final String countOpenTask = "vsat-api2/Service1.svc/Api-Task/CountingOpenTask/";
-    public static final String countFinishTask = "vsat-api2/Service1.svc/Api-Task/CountingFinishTask/";
+    public static final String countOpenTask = "papua-apps-api-master/web/api/CountingOpenTask/";
+    public static final String countFinishTask = "papua-apps-api-master/web/api/CountingFinishTask/";
 
-    public static final String listOpenTask = "vsat-api2/Service1.svc/Api-Task/ListOpenTask/";
-    public static final String listFinishTask = "vsat-api2/Service1.svc/Api-Task/ListFinishTask/";
+    public static final String listOpenTask = "papua-apps-api-master/web/api/ListOpenTask/";
+    public static final String listFinishTask = "papua-apps-api-master/web/api/ListFinishTask/";
     public static final String detailTask = "vsat-api2/Service1.svc/Api-Task/DetailTask/";
 
     public static final String diberikan = "vsat-api2/Service1.svc/Api-SPD/QueryTotalUang/";
@@ -25,7 +25,7 @@ public class BaseUrl {
     public static final String sisa = "vsat-api2/Service1.svc/Api-SPD/QuerySisaUang/";
 
 
-    public static final String listSpd = "vsat-api2/Service1.svc/Api-SPD/QueryTaskSPD/";
+    public static final String listSpd = "papua-apps-api-master/web/api/QueryTaskSPD/";
     public static final String listSpdVid = "vsat-api2/Service1.svc/Api-SPD/QueryTaskVID/";
     public static final String listSpdVidGambar = "vsat-api2/Service1.svc/Api-AddClass1/ListSPDAndGambar/";
     public static final String getSpdVid = "vsat-api2/Service1.svc/Api-AddClass1/GetSDPVID/";
