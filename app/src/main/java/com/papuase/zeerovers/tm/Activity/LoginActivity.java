@@ -104,7 +104,7 @@ public class LoginActivity extends AppCompatActivity {
                                 JSONObject paramObject = new JSONObject(response);
                                 ResultWS = paramObject.getString("Result");
                                 Log.i("LoginResault", "Result: "+ResultWS);
-                                if (ResultWS.equals("true")){
+                                if (ResultWS.equals("True")){
                                     JSONArray jsonArray = paramObject.getJSONArray("Raw");
                                     Log.i("LoginResault", "Raw + True: "+jsonArray);
                                     for (int i = 0; i < jsonArray.length(); i++) {
