@@ -181,8 +181,6 @@ public class TaskListActivity extends AppCompatActivity {
 
                                        }
 
-
-
                                    }else {
                                        mProgress.setVisibility(View.GONE);
                                        recyclerView.setVisibility(View.GONE);

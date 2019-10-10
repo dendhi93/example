@@ -209,7 +209,7 @@ public class OpenFragment extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         if (successCode == 401){
-                            mDataNull.setText("Mohon tanyakan support anda");
+                            mDataNull.setText("Mohon hubungi support anda!");
                         }else {
                             mDataNull.setText("Cek Jaringan anda");
                         }
@@ -237,7 +237,7 @@ public class OpenFragment extends Fragment {
         };
 
         Mysingleton.getInstance(getContext()).addToRequestQueue(request);
-        mProgress.setVisibility(View.GONE);
+//        mProgress.setVisibility(View.GONE);
     }
 
 }
