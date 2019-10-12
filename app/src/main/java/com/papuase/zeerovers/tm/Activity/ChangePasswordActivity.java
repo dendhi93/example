@@ -109,7 +109,7 @@ public class ChangePasswordActivity extends AppCompatActivity {
                             JSONObject object = new JSONObject(response);
                             ResultWS = object.getString("Result");
                             Log.i("forgetPassword", "Result: " + ResultWS);
-                            if (ResultWS.equals("False")) {
+                            if (ResultWS.equals("True")) {
 
                                 Log.i("forgetPassword", "Data1: " + object.getString("Data1"));
 

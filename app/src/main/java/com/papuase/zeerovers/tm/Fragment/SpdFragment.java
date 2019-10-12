@@ -3,6 +3,7 @@ package com.papuase.zeerovers.tm.Fragment;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -178,14 +179,11 @@ public class SpdFragment extends Fragment {
                                     Log.d(TAG, "getDataSpd: " + data.getString("sisa"));
 
 
-
-
                                     listSpdModels.add(lt);
                                     mProgress.setVisibility(View.GONE);
                                     recyclerView.setVisibility(View.VISIBLE);
                                 }
                                 mAdapter.notifyDataSetChanged();
-
 
                             }else {
                                 mProgress.setVisibility(View.GONE);
@@ -257,9 +255,8 @@ public class SpdFragment extends Fragment {
                                     Log.i(TAG, "total: " + data.getString("total"));
 
                                     Log.d(TAG, "TotalUang: " + data.getString("total"));
-
-                                    final String diBerikan = data.getString("total");
-                                    NumberFormat formatter = new DecimalFormat("#,###");
+                                    String diBerikan = data.getString("total");
+                                        NumberFormat formatter = new DecimalFormat("#,###");
                                     double myNumber1 = Double.parseDouble(diBerikan);
                                     String diBerikan1 = formatter.format(myNumber1);
                                     mDiBerikan.setText(diBerikan1);
