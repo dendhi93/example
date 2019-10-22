@@ -127,7 +127,12 @@ public class FinishFragment extends Fragment {
 
     private void loadMore() {
         listTaskFinishModels.add(null);
-        mAdapter.notifyItemInserted(listTaskFinishModels.size() - 1);
+        recyclerView.post(new Runnable() {
+            @Override
+            public void run() {
+                mAdapter.notifyItemInserted(listTaskFinishModels.size() - 1);
+            }
+        });
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -217,7 +222,7 @@ public class FinishFragment extends Fragment {
                                                     data.getString("TanggalTask"),
                                                     data.getString("PROVINSI"),
                                                     data.getString("idJenisTask"),
-                                                    data.getString("NamaKoordinator"),
+                                                    data.getString("NamaKordinator"),
                                                     data.getString("NamaTeknisi"),
                                                     data.getString("StatusTask")
                                             );
