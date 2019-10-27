@@ -42,19 +42,17 @@ public class BaseUrl {
     public static final String listStatusPerbaikan = "papua-apps-api-master/papua-apps-api/web/api/StatusPerbaikan";
     public static final String listHub= "vsat_DataHub/Service1.svc/ListHub";
 
+    public static final String updateDataLokasi = "papua-apps-api-master/papua-apps-api/web/api/ActionDataLokasi";
+    public static final String updateGeneralInfo = "papua-apps-api-master/papua-apps-api/web/api/ActionGeneralInfo";
+    public static final String updateDataTeknisi = "papua-apps-api-master/papua-apps-api/web/api/ActionDataTeknis";
+    public static final String updateDataTask = "papua-apps-api-master/papua-apps-api/web/api/ActionFinishTask";
+    public static final String updateDataSurvey = "papua-apps-api-master/papua-apps-api/web/api/InsertDataSurvey";
+    public static final String updateDataInstalasi = "papua-apps-api-master/papua-apps-api/web/api/InsertInstalasi";
 
+    public static final String listFoto = "papua-apps-api-master/papua-apps-api/web/api/ListFoto/";
+    public static final String insetFoto = "papua-apps-api-master/papua-apps-api/web/api/ActionInsertFoto";
 
-    public static final String updateDataLokasi = "vsat-api2/Service1.svc/Api-ActionTask/ActionDataLokasi";
-    public static final String updateGeneralInfo = "vsat-api2/Service1.svc/Api-ActionTask/ActionGeneralInfo";
-    public static final String updateDataTeknisi = "vsat-api2/Service1.svc/Api-ActionTask/ActionDataTeknis";
-    public static final String updateDataTask = "vsat-api2/Service1.svc/Api-ActionTask/ActionFinishTask";
-    public static final String updateDataSurvey = "vsat-api2/Service1.svc/Api-AddClass1/InsertDataSurvey";
-    public static final String updateDataInstalasi = "vsat-api2/Service1.svc/Api-AddClass1/InsertInstalasi";
-
-    public static final String listFoto = "vsat-api2/Service1.svc/Api-List/ListFoto/";
-    public static final String insetFoto = "vsat-api2/Service1.svc/Api-ActionTask/ActionInsertFoto";
-
-    public static final String listJenisBiaya = "vsat-api2/Service1.svc/Api-AddClass1/ListJenisBiaya";
+    public static final String listJenisBiaya = "papua-apps-api-master/papua-apps-api/web/api/ListJenisBiaya";
 
 
 
