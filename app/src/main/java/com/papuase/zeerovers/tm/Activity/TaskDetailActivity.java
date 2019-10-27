@@ -116,8 +116,6 @@ public class TaskDetailActivity extends AppCompatActivity {
         });
 
         new AsyingDetaikTask().execute();
-
-
     }
 
 
@@ -339,8 +337,6 @@ public class TaskDetailActivity extends AppCompatActivity {
                                                     mDataSurvey.setVisibility(View.GONE);
                                                     mUploadPhoto.setVisibility(View.VISIBLE);
                                                 }
-
-
 
                                                 mProgress.setVisibility(View.GONE);
                                                 mCardView1.setVisibility(View.VISIBLE);

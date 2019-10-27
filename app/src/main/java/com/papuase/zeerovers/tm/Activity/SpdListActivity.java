@@ -154,8 +154,6 @@ public class SpdListActivity extends AppCompatActivity {
                                             recyclerView.setVisibility(View.VISIBLE);
                                         }
                                         adapter.notifyDataSetChanged();
-
-
                                     }else {
                                         mProgress.setVisibility(View.GONE);
                                         recyclerView.setVisibility(View.GONE);

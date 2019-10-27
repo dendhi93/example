@@ -2,44 +2,44 @@ package com.papuase.zeerovers.tm.Api;
 
 public class BaseUrl {
 
-    public static final String getPublicIp = "http://10.7.11.87/";
+    public static final String getPublicIp = "http://192.168.1.168:1989/";
 //    public static final String getPublicIp = "http://10.10.2.2:7020/";
     public static final String urlPhotoLocal = "http://192.168.25.33:7003/vsat-api2/";
 
 
-    public static final String login = "papua-apps-api-master/web/api/login/";
-    public static final String changePassword = "papua-apps-api-master/web/api/changePass/";
-    public static final String forgetPassword = "papua-apps-api-master/web/api/forgotPass/";
+    public static final String login = "papua-apps-api-master/papua-apps-api/web/api/login/";
+    public static final String changePassword = "papua-apps-api-master/papua-apps-api//web/api/changePass/";
+    public static final String forgetPassword = "papua-apps-api-master/papua-apps-api//web/api/forgotPass/";
     public static final String profileTeknisi = "vsat-api2/Service1.svc/Api-Login/profileTeknisi/233029703";
 
-    public static final String countOpenTask = "papua-apps-api-master/web/api/CountingOpenTask/";
-    public static final String countFinishTask = "papua-apps-api-master/web/api/CountingFinishTask/";
+    public static final String countOpenTask = "papua-apps-api-master/papua-apps-api/web/api/CountingOpenTask/";
+    public static final String countFinishTask = "papua-apps-api-master/papua-apps-api/web/api/CountingFinishTask/";
 
-    public static final String listOpenTask = "papua-apps-api-master/web/api/ListOpenTask/";
-    public static final String listFinishTask = "papua-apps-api-master/web/api/ListFinishTask/";
-    public static final String detailTask = "papua-apps-api-master/web/api/DetailTask/";
+    public static final String listOpenTask = "papua-apps-api-master/papua-apps-api/web/api/ListOpenTask/";
+    public static final String listFinishTask = "papua-apps-api-master/papua-apps-api/web/api/ListFinishTask/";
+    public static final String detailTask = "papua-apps-api-master/papua-apps-api/web/api/DetailTask/";
 
-    public static final String diberikan = "papua-apps-api-master/web/api/QueryTotalUang/";
-    public static final String persetujuan = "papua-apps-api-master/web/api/QueryTotalApprove/";
-    public static final String digunakan = "papua-apps-api-master/web/api/QueryTotalPenggunaan/";
-    public static final String sisa = "papua-apps-api-master/web/api/QuerySisaUang/";
+    public static final String diberikan = "papua-apps-api-master/papua-apps-api/web/api/QueryTotalUang/";
+    public static final String persetujuan = "papua-apps-api-master/papua-apps-api/web/api/QueryTotalApprove/";
+    public static final String digunakan = "papua-apps-api-master/papua-apps-api/web/api/QueryTotalPenggunaan/";
+    public static final String sisa = "papua-apps-api-master/papua-apps-api/web/api/QuerySisaUang/";
 
-    public static final String listSpd = "papua-apps-api-master/web/api/QueryTaskSPD/";
-    public static final String listSpdVid = "papua-apps-api-master/web/api/QueryTaskVID/";
-    public static final String listSpdVidGambar = "papua-apps-api-master/web/api/ListSPDAndGambar/";
-    public static final String getSpdVid = "papua-apps-api-master/web/api/GetSDPVID/";
-    public static final String updateSpdVid = "papua-apps-api-master/web/api/UpdateSPDVID";
-    public static final String insetSpdVid = "papua-apps-api-master/web/api/InsertSPD";
-    public static final String deleteSpdVid = "papua-apps-api-master/web/api/DeleteSPDVID";
+    public static final String listSpd = "papua-apps-api-master/papua-apps-api/web/api/QueryTaskSPD/";
+    public static final String listSpdVid = "papua-apps-api-master/papua-apps-api/web/api/QueryTaskVID/";
+    public static final String listSpdVidGambar = "papua-apps-api-master/papua-apps-api/web/api/ListSPDAndGambar/";
+    public static final String getSpdVid = "papua-apps-api-master/papua-apps-api/web/api/GetSDPVID/";
+    public static final String updateSpdVid = "papua-apps-api-master/papua-apps-api/web/api/UpdateSPDVID";
+    public static final String insetSpdVid = "papua-apps-api-master/papua-apps-api/web/api/InsertSPD";
+    public static final String deleteSpdVid = "papua-apps-api-master/papua-apps-api/web/api/DeleteSPDVID";
 
-    public static final String listBarangTerpasang = "papua-apps-api-master/web/api/BarangFoto/";
-    public static final String insetBarangTerpasang = "papua-apps-api-master/web/api/ActionInsertBarangFoto";
+    public static final String listBarangTerpasang = "papua-apps-api-master/papua-apps-api/web/api/BarangFoto/";
+    public static final String insetBarangTerpasang = "papua-apps-api-master/papua-apps-api/web/api/ActionInsertBarangFoto";
 //    public static final String listBarangTerpasang = "vsat-api2/Service1.svc/Api-List/ListBarangTerpasang/SC201800010001006248";
 //    public static final String listBarangRusak = "vsat-api2/Service1.svc/Api-List/ListBarangTerpasang/SC201800010001006248";
     public static final String listBarangRusak = "papua-apps-api-master/web/api/barangRusakAndFoto/";
     public static final String insetBarangRusak = "papua-apps-api-master/web/api/ActionBarangRusak";
     public static final String listSpdDetail = "vsat-api2/Service1.svc/Api-List/ListSPD/SCM201800010001005391";
-    public static final String listStatusPerbaikan = "papua-apps-api-master/web/api/StatusPerbaikan";
+    public static final String listStatusPerbaikan = "papua-apps-api-master/papua-apps-api/web/api/StatusPerbaikan";
     public static final String listHub= "vsat_DataHub/Service1.svc/ListHub";
 
 

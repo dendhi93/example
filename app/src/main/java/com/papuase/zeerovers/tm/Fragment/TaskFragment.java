@@ -152,7 +152,7 @@ public class TaskFragment extends Fragment {
                             JSONObject jsonObj = new JSONObject(response);
                             ResultWS = jsonObj.getString("Result");
                             Log.i(TAG, "jsonObj StatusOpen : " +jsonObj);
-                            if (ResultWS.equals("true")) {
+                            if (ResultWS.equals("True")) {
                                 JSONArray jsonArray = jsonObj.getJSONArray("Raw");
                                 Log.d("TAG", "onResponse: " + jsonArray);
                                 for (int i = 0; i < jsonArray.length(); i++) {
@@ -160,9 +160,7 @@ public class TaskFragment extends Fragment {
 
                                     Log.i(TAG, "countOpen: " + data.getString("tot"));
                                     Log.i(TAG, "countOpen: " + data.getString("Status"));
-
                                     Log.d(TAG, "getData: " + data);
-
 
                                     final String countOpen = data.getString("tot");
                                     final String statusOpen = data.getString("Status");

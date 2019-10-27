@@ -128,6 +128,7 @@ public class OpenFragment extends Fragment {
     }
 
     public void getListData(){
+        Log.d("###","getListData");
         mProgress.setVisibility(View.VISIBLE);
         mRerty.setVisibility(View.GONE);
         mDataNull.setVisibility(View.GONE);
@@ -152,7 +153,7 @@ public class OpenFragment extends Fragment {
                                     JSONObject jsonObj = new JSONObject(response);
                                     String ResultWS = jsonObj.getString("Result");
 
-                                    if (ResultWS.equals("true")) {
+                                    if (ResultWS.equals("True")) {
                                         JSONArray jsonArray = jsonObj.getJSONArray("Raw");
                                         Log.d("TAG", "onResponse: " + jsonArray);
                                         for (int i = 0; i < jsonArray.length(); i++) {
@@ -168,7 +169,7 @@ public class OpenFragment extends Fragment {
                                                     data.getString("TanggalTask"),
                                                     data.getString("PROVINSI"),
                                                     data.getString("idJenisTask"),
-                                                    data.getString("NamaKoordinator"),
+                                                    data.getString("NamaKordinator"),
                                                     data.getString("NamaTeknisi"),
                                                     data.getString("StatusTask")
                                             );
@@ -176,6 +177,7 @@ public class OpenFragment extends Fragment {
                                             Log.d("TAG", "getData: " + data);
 
                                             listTaskOpenModels.add(lt);
+                                            Log.d("###",""+listTaskOpenModels.size());
                                             mProgress.setVisibility(View.GONE);
                                             recyclerView.setVisibility(View.VISIBLE);
                                         }
