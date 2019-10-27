@@ -39,6 +39,7 @@ import com.papuase.zeerovers.tm.Api.Mysingleton;
 import com.papuase.zeerovers.tm.Helper.DatePickerView;
 import com.papuase.zeerovers.tm.R;
 import com.papuase.zeerovers.tm.Utils.SharedPrefDataSPD;
+import com.papuase.zeerovers.tm.Utils.SharedPrefManager;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -79,6 +80,7 @@ public class InputSpdGambarActivity extends AppCompatActivity {
     public String tglInputBiaya;
     String catatanTransaksi;
     String urlFoto;
+    SharedPrefManager sharedPrefManager;
     public static String replaceAll;
     public static String noTask;
     public static String vid;
@@ -99,7 +101,7 @@ public class InputSpdGambarActivity extends AppCompatActivity {
         setTitle("Spd Pengeluaran");
 
         sharedPrefDataSPD = new SharedPrefDataSPD(this);
-
+        sharedPrefManager = new SharedPrefManager(this);
         NoVid = sharedPrefDataSPD.getVID();
         NoTask = sharedPrefDataSPD.getNoTask();
 
@@ -549,7 +551,7 @@ public class InputSpdGambarActivity extends AppCompatActivity {
 
 
     public void getDataSpdVid(){
-        String url = BaseUrl.getPublicIp+BaseUrl.getSpdVid+noTask+"/"+vid;
+        String url = BaseUrl.getPublicIp+BaseUrl.getSpdVid+noTask+"/"+vid+"/"+sharedPrefManager.getSPUserName();
         if (url.contains(" ")){
             url = url.replace(" ","%20");
         }else if (url.contains("null")){

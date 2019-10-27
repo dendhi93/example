@@ -27,7 +27,7 @@ public class BaseUrl {
     public static final String listSpd = "papua-apps-api-master/papua-apps-api/web/api/QueryTaskSPD/";
     public static final String listSpdVid = "papua-apps-api-master/papua-apps-api/web/api/QueryTaskVID/";
     public static final String listSpdVidGambar = "papua-apps-api-master/papua-apps-api/web/api/ListSPDAndGambar/";
-    public static final String getSpdVid = "papua-apps-api-master/papua-apps-api/web/api/GetSDPVID/";
+    public static final String getSpdVid = "papua-apps-api-master/papua-apps-api/web/api/GetSPDVID/";
     public static final String updateSpdVid = "papua-apps-api-master/papua-apps-api/web/api/UpdateSPDVID";
     public static final String insetSpdVid = "papua-apps-api-master/papua-apps-api/web/api/InsertSPD";
     public static final String deleteSpdVid = "papua-apps-api-master/papua-apps-api/web/api/DeleteSPDVID";

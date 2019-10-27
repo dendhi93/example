@@ -132,7 +132,7 @@ public class DataLokasiActivity extends AppCompatActivity {
 
     public void getData(){
         progressDialog.show();
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();;
         Log.i(TAG, "NoTask DataLokasi: " + id);
         Log.i(TAG, "Url DataLokasi: " + url);
         if (url.contains(" ")){

@@ -25,6 +25,7 @@ import com.papuase.zeerovers.tm.Api.BaseUrl;
 import com.papuase.zeerovers.tm.Api.Mysingleton;
 import com.papuase.zeerovers.tm.R;
 import com.papuase.zeerovers.tm.Utils.SharedPrefDataSPD;
+import com.papuase.zeerovers.tm.Utils.SharedPrefManager;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,7 +46,7 @@ public class SpdDetailActivity extends AppCompatActivity {
     public static String flagUpload;
 
     String vid, noTask;
-
+    SharedPrefManager sharedPrefManager;
     TextView mNamaRemote, mNoTask, mVid, mNamaTask, mIpLan, mlokasi, mNote, statusSpd;
     CardView info, formList;
     Button mKonfirm;
@@ -63,6 +64,7 @@ public class SpdDetailActivity extends AppCompatActivity {
         progressDialog = new ProgressDialog(this);
 
         sharedPrefDataSPD = new SharedPrefDataSPD(this);
+        sharedPrefManager = new SharedPrefManager(this);
 
         Intent in = getIntent();
         vid = in.getStringExtra(SharedPrefDataSPD.VIDSAVE);
@@ -97,7 +99,7 @@ public class SpdDetailActivity extends AppCompatActivity {
         progressDialog.show();
         mKonfirm.setVisibility(View.GONE);
         mNote.setVisibility(View.GONE);
-        String url = BaseUrl.getPublicIp + BaseUrl.getSpdVid+noTask+"/"+vid;
+        String url = BaseUrl.getPublicIp + BaseUrl.getSpdVid+noTask+"/"+vid+"/"+sharedPrefManager.getSPUserName();
         if (url.contains(" ")){
             url = url.replace(" ","%20");
         }
@@ -152,7 +154,6 @@ public class SpdDetailActivity extends AppCompatActivity {
                                             String namaRemote = data.getString("NAMAREMOTE");
                                             String ipLan = data.getString("IPLAN");
                                             String alamat = data.getString("ALAMAT");
-
 
                                             mNamaRemote.setText(namaRemote);
                                             mNoTask.setText(noTask);

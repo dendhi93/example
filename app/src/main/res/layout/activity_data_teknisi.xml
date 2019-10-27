@@ -23,10 +23,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/hardware_rusak"
@@ -41,12 +41,13 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/sqf"
@@ -61,17 +62,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"/>
-
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/enso"
@@ -86,12 +82,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/carrier"
@@ -106,12 +102,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/hasil_xpoll"
@@ -126,12 +122,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/cpi"
@@ -146,12 +142,14 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
+
                     <EditText
                         android:id="@+id/oprator_satelit"
                         android:layout_width="match_parent"
@@ -165,12 +163,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/oprator_helpdesk"
@@ -185,13 +183,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/out_pln"
@@ -206,12 +203,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
+                    android:layout_height="wrap_content">
 
                     <EditText
                         android:id="@+id/aktifitas_solusi"
@@ -231,13 +228,12 @@
                         android:textColor="@android:color/black"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/out_ups"
                         android:layout_width="match_parent"
@@ -251,7 +247,7 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <TextView
                     android:layout_marginLeft="5dp"
@@ -274,11 +270,10 @@
                     android:layout_height="1dp"
                     android:background="@color/colorGrey500"/>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/suhu_ruangan"
                         android:layout_width="match_parent"
@@ -292,13 +287,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/type_mounting"
                         android:layout_width="match_parent"
@@ -312,13 +306,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/panjang_kabel"
                         android:layout_width="match_parent"
@@ -332,13 +325,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/letak_antena"
                         android:layout_width="match_parent"
@@ -352,13 +344,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/letak_modem"
                         android:layout_width="match_parent"
@@ -372,13 +363,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/letak_satelit"
                         android:layout_width="match_parent"
@@ -392,13 +382,12 @@
                         android:maxLength="50"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <android.support.design.widget.TextInputLayout
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical">
-
+                    android:layout_height="wrap_content">
                     <EditText
                         android:id="@+id/analisa_problem"
                         android:layout_width="match_parent"
@@ -417,8 +406,7 @@
                         android:textColor="@android:color/black"
                         android:textAppearance="@style/TextAppearance.AppCompat.Small" />
 
-                </android.support.design.widget.TextInputLayout>
-
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <RelativeLayout
                     android:layout_marginTop="10dp"

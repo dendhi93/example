@@ -46,6 +46,7 @@ public class DataInstallasiActivity extends AppCompatActivity {
     private Button mSaveBtn;
     Boolean statusIL;
     String ResultWS, id, vid;
+    SharedPrefManager sharedPrefManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +54,7 @@ public class DataInstallasiActivity extends AppCompatActivity {
         setContentView(R.layout.activity_data_installasi);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle("Data Installasi");
+        sharedPrefManager = new SharedPrefManager(this);
 
         Intent in = getIntent();
         id = in.getStringExtra(SharedPrefManager.SP_ID);
@@ -131,7 +133,7 @@ public class DataInstallasiActivity extends AppCompatActivity {
     }
 
     public void getDataInstallasi(){
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();;
         Log.i(TAG, "NoTask DataInstallasi: " + id);
         Log.i(TAG, "Url DataInstallasi: " + url);
         if (url.contains(" ")){

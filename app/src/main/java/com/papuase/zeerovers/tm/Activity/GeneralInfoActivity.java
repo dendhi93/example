@@ -128,7 +128,7 @@ public class GeneralInfoActivity extends AppCompatActivity {
     public void dataGeneralInfo(){
         progressDialog.show();
         Log.i(TAG, "NoTask General Info: " + id);
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();;
         Log.i(TAG, "dataGeneralInfo: " + url);
         if (url.contains(" ")){
             url = url.replace(" ","%20");

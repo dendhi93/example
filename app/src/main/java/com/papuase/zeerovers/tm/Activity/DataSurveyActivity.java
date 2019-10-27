@@ -44,6 +44,7 @@ public class DataSurveyActivity extends AppCompatActivity {
     private Spinner mSpinnerTypeKabel;
     private Button mSaveBtn;
     ProgressDialog progressDialog;
+    SharedPrefManager sharedPrefManager;
 
     Boolean statusSV;
     String ResultWS, id, vid;
@@ -56,6 +57,7 @@ public class DataSurveyActivity extends AppCompatActivity {
         setTitle("Data Survey");
 
         progressDialog = new ProgressDialog(this);
+        sharedPrefManager = new SharedPrefManager(this);
         Intent in = getIntent();
         id = in.getStringExtra(SharedPrefManager.SP_ID);
         vid = in.getStringExtra(SharedPrefManager.SP_VID);
@@ -114,7 +116,7 @@ public class DataSurveyActivity extends AppCompatActivity {
 
     public void getDataSurvey(){
         progressDialog.show();
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();;
         Log.i(TAG, "NoTask DataSurvey: " + id);
         Log.i(TAG, "Url DataSurvey: " + url);
         if (url.contains(" ")){

@@ -125,7 +125,7 @@ public class DataTeknisiActivity extends AppCompatActivity {
     public void dataDataTeknisi(){
         progressDialog.show();
         Log.i(TAG, "NoTask General Info: " + id);
-        String url = BaseUrl.getPublicIp+ BaseUrl.detailTask+ id;
+        String url = BaseUrl.getPublicIp+ BaseUrl.detailTask+ id+"/"+sharedPrefManager.getSPUserName();;
         if (url.contains(" ")){
             url = url.replace(" ","%20");
         }

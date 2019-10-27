@@ -148,7 +148,7 @@ public class TaskDetailActivity extends AppCompatActivity {
 
         Log.i(TAG, "idTest: " + id);
 //        String id = sharedPrefManager.getId();
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();
         Log.i(TAG, "Url Detail Task: " + url);
         if (url.contains(" ")){
             url = url.replace(" ","%20");
@@ -171,15 +171,15 @@ public class TaskDetailActivity extends AppCompatActivity {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject data = jsonArray.getJSONObject(i);
 
-                                            statusTask = data.getString("IdStatusPerbaikan");
+                                            statusTask = data.getString("idStatusPerbaikan");
                                             Log.i(TAG, "IdStatusPerbaikan : " +statusTask);
                                             String statusDL = data.getString("FlagDataLokasi");
                                             String statusGI = data.getString("FlagGeneralInfo");
                                             String statusDT = data.getString("FlagDataTeknis");
                                             String statusDB = data.getString("FlagDataBarang");
-                                            String statusUP = data.getString("FlagUploadPhoto");
+                                            String statusUP = data.getString("FlagUploadFoto");
                                             String statusSV = data.getString("FlagDataSurvey");
-                                            String statusIL = data.getString("FlagDataInstallasi");
+                                            String statusIL = data.getString("FlagDataInstalasi");
 
                                             sharedPrefDataTask.saveSPString(SharedPrefDataTask.statusDataLokasi, statusDL);
                                             sharedPrefDataTask.saveSPString(SharedPrefDataTask.statusGeneralInfo, statusGI);

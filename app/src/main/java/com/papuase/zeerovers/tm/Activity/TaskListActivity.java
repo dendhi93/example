@@ -91,7 +91,7 @@ public class TaskListActivity extends AppCompatActivity {
         recyclerView.setVisibility(View.GONE);
         String id = sharedPrefManager.getId();
         Log.i("TAG", "getListData: " + id);
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();;
         Log.i(TAG, "URL List Data: " + url);
 
         StringRequest request = new StringRequest(Request.Method.GET, url,
