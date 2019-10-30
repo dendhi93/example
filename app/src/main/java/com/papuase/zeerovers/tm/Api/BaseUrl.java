@@ -8,8 +8,8 @@ public class BaseUrl {
 
 
     public static final String login = "papua-apps-api-master/papua-apps-api/web/api/login/";
-    public static final String changePassword = "papua-apps-api-master/papua-apps-api//web/api/changePass/";
-    public static final String forgetPassword = "papua-apps-api-master/papua-apps-api//web/api/forgotPass/";
+    public static final String changePassword = "papua-apps-api-master/papua-apps-api/web/api/changePass/";
+    public static final String forgetPassword = "papua-apps-api-master/papua-apps-api/web/api/forgotPass/";
     public static final String profileTeknisi = "vsat-api2/Service1.svc/Api-Login/profileTeknisi/233029703";
 
     public static final String countOpenTask = "papua-apps-api-master/papua-apps-api/web/api/CountingOpenTask/";

@@ -88,6 +88,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         else {
 
             String url = BaseUrl.getPublicIp + BaseUrl.forgetPassword + getEmail ;
+            Log.d("###",""+url);
             StringRequest request = new StringRequest(Request.Method.GET, url,
                     new Response.Listener<String>() {
                         @Override

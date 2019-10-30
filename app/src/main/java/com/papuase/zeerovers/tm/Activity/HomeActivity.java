@@ -1,16 +1,10 @@
 package com.papuase.zeerovers.tm.Activity;
 
-import android.Manifest;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.location.LocationManager;
-import android.os.Build;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -47,7 +41,6 @@ public class HomeActivity extends AppCompatActivity {
     private ActionBarDrawerToggle actionBarDrawerToggle;
     private NavigationView navigationView;
     private SharedPrefManager sharedPrefManager;
-    final private int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = item -> {
@@ -83,7 +76,6 @@ public class HomeActivity extends AppCompatActivity {
 
         content_main = findViewById(R.id.content_main);
         showFragment(new TaskFragment());
-        statusCheck();
 
         drawerLayout = findViewById(R.id.nav_drawer);
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout,R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -143,88 +135,6 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    public void statusCheck() {
-        final LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
-
-        assert manager != null;
-
-        if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)){
-            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-            builder.setMessage("Your GPS seems to be disabled, do you want to enable it?")
-                    .setCancelable(false)
-                    .setPositiveButton("Yes", (dialog, id) -> startActivity(new
-                            Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS)))
-                    .setNegativeButton("No", (dialog, id) -> dialog.cancel());
-            final AlertDialog alert = builder.create();
-            alert.show();
-        }
-
-        else if (manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-            buildAlertMessageNoGps();
-        }
-    }
-    private void showMessageOKCancel(String message, DialogInterface.OnClickListener okListener) {
-        new AlertDialog.Builder(HomeActivity.this)
-                .setMessage(message)
-                .setPositiveButton("OK", okListener)
-                .setNegativeButton("Cancel", null)
-                .create()
-                .show();
-    }
-
-    private void buildAlertMessageNoGps() {
-        if (Build.VERSION.SDK_INT >= 23) {
-            List<String> permissionsNeeded = new ArrayList<String>();
-            final List<String> permissionsList = new ArrayList<String>();
-
-            if (!addPermission(permissionsList, Manifest.permission.ACCESS_FINE_LOCATION))
-                permissionsNeeded.add("GPS");
-            if (!addPermission(permissionsList, Manifest.permission.ACCESS_COARSE_LOCATION))
-                permissionsNeeded.add("Location");
-            if (!addPermission(permissionsList, Manifest.permission.CAMERA))
-                permissionsNeeded.add("Camera");
-            if (!addPermission(permissionsList, Manifest.permission.READ_EXTERNAL_STORAGE))
-                permissionsNeeded.add("External Storage Read");
-            if (!addPermission(permissionsList, Manifest.permission.WRITE_EXTERNAL_STORAGE))
-                permissionsNeeded.add("External Storage Write");
-
-            if (permissionsList.size() > 0) {
-                if (permissionsNeeded.size() > 0) {
-                    // Need Rationale
-                    String message = "You need to grant access to " + permissionsNeeded.get(0);
-                    for (int i = 1; i < permissionsNeeded.size(); i++)
-                        message = message + ", " + permissionsNeeded.get(i);
-                    showMessageOKCancel(message,
-                            new DialogInterface.OnClickListener() {
-                                @RequiresApi(api = Build.VERSION_CODES.M)
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    requestPermissions(permissionsList.toArray(new String[permissionsList.size()]),
-                                            REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
-                                }
-                            });
-                    return;
-                }
-                requestPermissions(permissionsList.toArray(new String[permissionsList.size()]),
-                        REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
-                return;
-            }
-        }
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    private boolean addPermission(List<String> permissionsList, String permission) {
-        if (checkSelfPermission(permission) != PackageManager.PERMISSION_GRANTED) {
-            permissionsList.add(permission);
-            // Check for Rationale Option
-            if (!shouldShowRequestPermissionRationale(permission))
-                return false;
-        }
-        return true;
-    }
-
-
-
     public void logout(){
         new AlertDialog.Builder(this)
                 .setTitle("Log Out")
@@ -281,6 +191,5 @@ public class HomeActivity extends AppCompatActivity {
             }
         }).start();
     }
-
 
 }
