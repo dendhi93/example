@@ -570,11 +570,8 @@ public class DataLokasiActivity extends AppCompatActivity {
 
                             try {
                                 JSONObject jsonResponse = new JSONObject(response);
-
                                 ResultWS = jsonResponse.getString("Result");
-
                                 if (ResultWS.equals("True")) {
-
                                     String Data1 = jsonResponse.getString("Data1");
                                     Log.i("TAG", "onResponse: " + Data1);
                                     Toasty.success(DataLokasiActivity.this, "Success", Toast.LENGTH_SHORT, true).show();
