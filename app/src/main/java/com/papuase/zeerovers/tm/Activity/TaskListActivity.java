@@ -91,7 +91,7 @@ public class TaskListActivity extends AppCompatActivity {
         recyclerView.setVisibility(View.GONE);
         String id = sharedPrefManager.getId();
         Log.i("TAG", "getListData: " + id);
-        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();;
+        String url = BaseUrl.getPublicIp + BaseUrl.detailTask+id+"/"+sharedPrefManager.getSPUserName();
         Log.i(TAG, "URL List Data: " + url);
 
         StringRequest request = new StringRequest(Request.Method.GET, url,
@@ -125,7 +125,7 @@ public class TaskListActivity extends AppCompatActivity {
                                                    data.getString("NoTask"),
                                                    data.getString("Provinsi"),
                                                    data.getString("StatusPekerjaan"),
-                                                   data.getString("IdStatusPerbaikan")
+                                                   data.getString("idStatusPerbaikan")
                                            );
 
                                            Log.i("data_lokasi", "data_lokasi: "+ data.getString("NAMAREMOTE"));

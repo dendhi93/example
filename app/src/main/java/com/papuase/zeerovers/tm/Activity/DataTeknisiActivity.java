@@ -148,7 +148,7 @@ public class DataTeknisiActivity extends AppCompatActivity {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject data = jsonArray.getJSONObject(i);
 
-                                            String statusDataTeknisi = data.getString("IdStatusPerbaikan");
+                                            String statusDataTeknisi = data.getString("idStatusPerbaikan");
                                             String statusDT = data.getString("FlagDataTeknis");
                                             Log.i("DataTeknisi", "DataTeknisi: " + statusDataTeknisi);
                                             Log.i("statusDT", "statusDT: " + statusDT);

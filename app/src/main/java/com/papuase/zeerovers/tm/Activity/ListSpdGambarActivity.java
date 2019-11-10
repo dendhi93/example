@@ -58,7 +58,7 @@ public class ListSpdGambarActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list_spd_gambar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        if(getSupportActionBar() != null){getSupportActionBar().setDisplayHomeAsUpEnabled(true); }
         setTitle("SPD");
 
         sharedPrefDataSPD = new SharedPrefDataSPD(this);
@@ -170,15 +170,15 @@ public class ListSpdGambarActivity extends AppCompatActivity {
                                             }
                                             else if (flag.equals("true")){
                                                 ListSpdGambarModel md = new ListSpdGambarModel(
-                                                        data.getString("ID"),
+                                                        data.getString("id"),
                                                         data.getString("file_url"),
-                                                        data.getString("Description"),
-                                                        data.getString("VID"),
-                                                        data.getString("NoTask"),
-                                                        data.getString("CatatanTransaksi"),
-                                                        data.getString("JenisBiaya"),
-                                                        data.getString("Nominal"),
-                                                        data.getString("TglInputBiaya"),
+                                                        data.getString("description"),
+                                                        data.getString("vid"),
+                                                        data.getString("no_task"),
+                                                        data.getString("catatan_transaksi"),
+                                                        data.getString("nama_jenis_biaya"),
+                                                        data.getString("nominal"),
+                                                        data.getString("tgl_input_biaya"),
                                                         data.getString("file_id")
                                                 );
                                                 spdGambarModels.add(md);
@@ -188,15 +188,15 @@ public class ListSpdGambarActivity extends AppCompatActivity {
                                             }
                                             else if (flag.equals("false")){
                                                 ListSpdGambarModel md = new ListSpdGambarModel(
-                                                        data.getString("ID"),
+                                                        data.getString("id"),
                                                         data.getString("file_url"),
-                                                        data.getString("Description"),
-                                                        data.getString("VID"),
-                                                        data.getString("NoTask"),
-                                                        data.getString("CatatanTransaksi"),
-                                                        data.getString("JenisBiaya"),
-                                                        data.getString("Nominal"),
-                                                        data.getString("TglInputBiaya"),
+                                                        data.getString("description"),
+                                                        data.getString("vid"),
+                                                        data.getString("no_task"),
+                                                        data.getString("catatan_transaksi"),
+                                                        data.getString("nama_jenis_biaya"),
+                                                        data.getString("nominal"),
+                                                        data.getString("tgl_input_biaya"),
                                                         data.getString("file_id")
                                                 );
                                                 spdGambarModels.add(md);

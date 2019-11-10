@@ -156,7 +156,7 @@ public class DataLokasiActivity extends AppCompatActivity {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject data = jsonArray.getJSONObject(i);
 
-                                            String statusDataLokasi = data.getString("IdStatusPerbaikan");
+                                            String statusDataLokasi = data.getString("idStatusPerbaikan");
                                             String statusDL = data.getString("FlagDataLokasi");
                                             Log.i("TAG", "run: "+ statusDL);
 
@@ -165,7 +165,7 @@ public class DataLokasiActivity extends AppCompatActivity {
                                                 Log.i(TAG, "TaskList: "+data);
                                                 Log.i(TAG, "data_lokasi_Open: " + data.getString("NAMAREMOTE"));
                                                 Log.i(TAG, "data_lokasi_Open: " + data.getString("ALAMAT"));
-                                                Log.i(TAG, "data_lokasi_Open: " + data.getString("PROVINSI1"));
+                                                Log.i(TAG, "data_lokasi_Open: " + data.getString("Provinsi"));
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("Provinsi"));
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("KOTA"));
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("KANWIL"));
@@ -177,7 +177,7 @@ public class DataLokasiActivity extends AppCompatActivity {
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("Hub"));
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("Latitude"));
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("Longitude"));
-                                                Log.i(TAG, "data_lokasi_Open: "+ data.getString("AlamatSekarang"));
+                                                Log.i(TAG, "data_lokasi_Open: "+ data.getString("alamatSekarang"));
                                                 Log.i(TAG, "data_lokasi_Open: "+ data.getString("Catatan"));
 
                                                 if (data.getString("NAMAREMOTE").equals("null") || data.getString("NAMAREMOTE") == null || data.getString("NAMAREMOTE").equals("")){
@@ -264,11 +264,11 @@ public class DataLokasiActivity extends AppCompatActivity {
                                                     String longtitude = data.getString("Longitude");
                                                     mLongitude.setText(longtitude);
                                                 }
-                                                if (data.getString("AlamatSekarang").equals("null") || data.getString("AlamatSekarang").equals(null) || data.getString("AlamatSekarang").equals("null")){
+                                                if (data.getString("alamatSekarang").equals("null") || data.getString("alamatSekarang").equals(null) || data.getString("alamatSekarang").equals("null")){
                                                     String alamatSekarang = "";
                                                     mAlamatSekarang.setText(alamatSekarang);
                                                 }else {
-                                                    String alamatSekarang = data.getString("AlamatSekarang");
+                                                    String alamatSekarang = data.getString("alamatSekarang");
                                                     mAlamatSekarang.setText(alamatSekarang);
                                                 }
                                                 if (data.getString("Catatan").equals("null") || data.getString("Catatan").equals(null) || data.getString("Catatan").equals("")){
@@ -306,7 +306,6 @@ public class DataLokasiActivity extends AppCompatActivity {
                                                 Log.i(TAG, "data_lokasi_Finish: "+ data.getString("Longitude"));
                                                 Log.i(TAG, "data_lokasi_Finish: "+ data.getString("AlamatSekarang"));
                                                 Log.i(TAG, "data_lokasi_Finish: "+ data.getString("Catatan"));
-
 
                                                 if (data.getString("NAMAREMOTE").equals("null") || data.getString("NAMAREMOTE").equals(null)|| data.getString("NAMAREMOTE").equals("")){
                                                     String namaRemote = "";
