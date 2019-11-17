@@ -35,8 +35,8 @@ public class BaseUrl {
     public static final String insetBarangTerpasang = "papua-apps-api-master/papua-apps-api/web/api/ActionInsertBarangFoto";
 //    public static final String listBarangTerpasang = "vsat-api2/Service1.svc/Api-List/ListBarangTerpasang/SC201800010001006248";
 //    public static final String listBarangRusak = "vsat-api2/Service1.svc/Api-List/ListBarangTerpasang/SC201800010001006248";
-    public static final String listBarangRusak = "papua-apps-api-master/web/api/barangRusakAndFoto/";
-    public static final String insetBarangRusak = "papua-apps-api-master/web/api/ActionBarangRusak";
+    public static final String listBarangRusak = "papua-apps-api-master/papua-apps-api/web/api/barangRusakAndFoto/";
+    public static final String insetBarangRusak = "papua-apps-api-master/papua-apps-api/web/api/ActionBarangRusak";
     public static final String listSpdDetail = "vsat-api2/Service1.svc/Api-List/ListSPD/SCM201800010001005391";
     public static final String listStatusPerbaikan = "papua-apps-api-master/papua-apps-api/web/api/StatusPerbaikan";
     public static final String listHub= "vsat_DataHub/Service1.svc/ListHub";
