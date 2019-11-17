@@ -114,7 +114,7 @@ public class TaskListActivity extends AppCompatActivity {
                                        Log.i("TaskList", "TaskList: "+jsonArray);
                                        for (int i = 0; i < jsonArray.length(); i++) {
                                            JSONObject data = jsonArray.getJSONObject(i);
-                                           statusTask = data.getString("idStatusPerbaikan");
+                                           statusTask = data.getString("IdStatusPerbaikan");
                                            Log.i("TAG", "status : "+statusTask);
                                            Log.i("TaskList", "TaskList: "+data);
                                            Log.i("TaskList", "id: " + data.getString("NoTask"));

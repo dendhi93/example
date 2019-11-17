@@ -171,7 +171,7 @@ public class TaskDetailActivity extends AppCompatActivity {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject data = jsonArray.getJSONObject(i);
 
-                                            statusTask = data.getString("idStatusPerbaikan");
+                                            statusTask = data.getString("IdStatusPerbaikan");
                                             Log.i(TAG, "IdStatusPerbaikan : " +statusTask);
                                             String statusDL = data.getString("FlagDataLokasi");
                                             String statusGI = data.getString("FlagGeneralInfo");

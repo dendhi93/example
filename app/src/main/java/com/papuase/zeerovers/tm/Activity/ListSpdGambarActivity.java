@@ -170,7 +170,7 @@ public class ListSpdGambarActivity extends AppCompatActivity {
                                             }
                                             else if (flag.equals("true")){
                                                 ListSpdGambarModel md = new ListSpdGambarModel(
-                                                        data.getString("id"),
+                                                        data.getString("ID"),
                                                         data.getString("file_url"),
                                                         data.getString("description"),
                                                         data.getString("vid"),

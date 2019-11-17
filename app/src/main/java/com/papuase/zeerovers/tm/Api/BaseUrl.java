@@ -1,8 +1,7 @@
 package com.papuase.zeerovers.tm.Api;
 
 public class BaseUrl {
-
-    public static final String getPublicIp = "http://192.168.1.100:1989/";
+    public static final String getPublicIp = "http://192.168.1.101:1989/";
 //    public static final String getPublicIp = "http://10.10.2.2:7020/";
     public static final String urlPhotoLocal = "http://192.168.25.33:7003/vsat-api2/";
 

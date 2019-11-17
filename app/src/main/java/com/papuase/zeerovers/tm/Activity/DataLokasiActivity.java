@@ -156,7 +156,7 @@ public class DataLokasiActivity extends AppCompatActivity {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject data = jsonArray.getJSONObject(i);
 
-                                            String statusDataLokasi = data.getString("idStatusPerbaikan");
+                                            String statusDataLokasi = data.getString("IdStatusPerbaikan");
                                             String statusDL = data.getString("FlagDataLokasi");
                                             Log.i("TAG", "run: "+ statusDL);
 
@@ -580,6 +580,8 @@ public class DataLokasiActivity extends AppCompatActivity {
                                     intent.putExtra(SharedPrefManager.SP_ID, id);
                                     startActivity(intent);
                                     finish();
+                                }else {
+                                    Toasty.success(DataLokasiActivity.this, "Data tidak ada perubahan", Toast.LENGTH_SHORT, true).show();
                                 }
                                 Log.i("TAG", "Ski data from server - ok" + response);
                             } catch (JSONException e) {

@@ -157,7 +157,7 @@ public class DataInstallasiActivity extends AppCompatActivity {
                                         for (int i = 0; i < jsonArray.length(); i++) {
                                             JSONObject data = jsonArray.getJSONObject(i);
 
-                                            String statusDataInstallasi = data.getString("idStatusPerbaikan");
+                                            String statusDataInstallasi = data.getString("IdStatusPerbaikan");
                                             String statusInstalatsi = data.getString("FlagDataInstallasi");
                                             Log.i(TAG, "FlagDataInstallasi : "+ statusInstalatsi);
 
