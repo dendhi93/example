@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -37,6 +38,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import es.dmoral.toasty.Toasty;
 
 
 public class GalleryPhotoActivity extends AppCompatActivity {
@@ -74,7 +76,6 @@ public class GalleryPhotoActivity extends AppCompatActivity {
         vid = in.getStringExtra(SharedPrefDataTask.VID);
         noTask = in.getStringExtra(SharedPrefDataTask.NoTask);
         statusTask = in.getStringExtra(SharedPrefDataTask.idJenisTask);
-
 
         Log.i(TAG, "id: " + id);
         Log.i(TAG, "vid: " + vid);
@@ -193,6 +194,7 @@ public class GalleryPhotoActivity extends AppCompatActivity {
                             }else {
                                 String Responsecode = jsonObj.getString("Data1");
                                 Log.i(TAG, "else Response True: " + Responsecode);
+                                Toasty.info(GalleryPhotoActivity.this, Responsecode, Toast.LENGTH_LONG).show();
                                 mDataNull.setText("Data Belum Di Tambahkan Foto");
                                 recyclerView.setVisibility(View.GONE);
                                 fabAddUpload.setVisibility(View.VISIBLE);

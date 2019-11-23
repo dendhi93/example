@@ -32,11 +32,11 @@ public class BaseUrl {
     public static final String deleteSpdVid = "papua-apps-api-master/papua-apps-api/web/api/DeleteSPDVID";
 
     public static final String listBarangTerpasang = "papua-apps-api-master/papua-apps-api/web/api/BarangFoto/";
-    public static final String insetBarangTerpasang = "papua-apps-api-master/papua-apps-api/web/api/ActionInsertBarangFoto";
+    public static final String insetBarangTerpasang = "papua-apps-api-master/papua-apps-api/web/api/insert-barang-terpasang";
 //    public static final String listBarangTerpasang = "vsat-api2/Service1.svc/Api-List/ListBarangTerpasang/SC201800010001006248";
 //    public static final String listBarangRusak = "vsat-api2/Service1.svc/Api-List/ListBarangTerpasang/SC201800010001006248";
     public static final String listBarangRusak = "papua-apps-api-master/papua-apps-api/web/api/barangRusakAndFoto/";
-    public static final String insetBarangRusak = "papua-apps-api-master/papua-apps-api/web/api/ActionBarangRusak";
+    public static final String insetBarangRusak = "papua-apps-api-master/papua-apps-api/web/api/insert-barang-rusak";
     public static final String listSpdDetail = "vsat-api2/Service1.svc/Api-List/ListSPD/SCM201800010001005391";
     public static final String listStatusPerbaikan = "papua-apps-api-master/papua-apps-api/web/api/StatusPerbaikan";
     public static final String listHub= "vsat_DataHub/Service1.svc/ListHub";
@@ -49,7 +49,7 @@ public class BaseUrl {
     public static final String updateDataInstalasi = "papua-apps-api-master/papua-apps-api/web/api/update-data-instalasi";
 
     public static final String listFoto = "papua-apps-api-master/papua-apps-api/web/api/ListFoto/";
-    public static final String insetFoto = "papua-apps-api-master/papua-apps-api/web/api/ActionInsertFoto";
+    public static final String insetFoto = "papua-apps-api-master/papua-apps-api/web/api/insert-foto";
 
     public static final String listJenisBiaya = "papua-apps-api-master/papua-apps-api/web/api/ListJenisBiaya";
 
