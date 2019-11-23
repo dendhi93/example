@@ -42,11 +42,11 @@ public class BaseUrl {
     public static final String listHub= "vsat_DataHub/Service1.svc/ListHub";
 
     public static final String updateDataLokasi = "papua-apps-api-master/papua-apps-api/web/api/ActionDataLokasi";
-    public static final String updateGeneralInfo = "papua-apps-api-master/papua-apps-api/web/api/ActionGeneralInfo";
-    public static final String updateDataTeknisi = "papua-apps-api-master/papua-apps-api/web/api/ActionDataTeknis";
+    public static final String updateGeneralInfo = "papua-apps-api-master/papua-apps-api/web/api/update-general-info";
+    public static final String updateDataTeknisi = "papua-apps-api-master/papua-apps-api/web/api/update-data-teknisi";
     public static final String updateDataTask = "papua-apps-api-master/papua-apps-api/web/api/ActionFinishTask";
-    public static final String updateDataSurvey = "papua-apps-api-master/papua-apps-api/web/api/InsertDataSurvey";
-    public static final String updateDataInstalasi = "papua-apps-api-master/papua-apps-api/web/api/InsertInstalasi";
+    public static final String updateDataSurvey = "papua-apps-api-master/papua-apps-api/web/api/update-data-survey";
+    public static final String updateDataInstalasi = "papua-apps-api-master/papua-apps-api/web/api/update-data-instalasi";
 
     public static final String listFoto = "papua-apps-api-master/papua-apps-api/web/api/ListFoto/";
     public static final String insetFoto = "papua-apps-api-master/papua-apps-api/web/api/ActionInsertFoto";
