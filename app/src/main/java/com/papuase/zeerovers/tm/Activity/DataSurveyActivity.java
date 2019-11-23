@@ -147,25 +147,25 @@ public class DataSurveyActivity extends AppCompatActivity {
                                             Log.i("TAG", "status : "+statusDataSurvey);
                                             if (statusDataSurvey.equals("1")) {
                                                 Log.i(TAG, "TaskList: "+data);
-                                                Log.i(TAG, "data_Survey_Open: " + data.getString("AlamatPengirimanSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: " + data.getString("TempatPenyimpananSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: " + data.getString("NamaPICSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("KontakPICSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("PenempatanGroundingSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("UkuranAntenaSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("TempatAntenaSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("KekuatanRoofSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("JenisMountingSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("LatitudeSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("LongitudeSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("ListrikAwalSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("SarpenACIndoorSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("SarpenUPSSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("PanjangKabelSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("TypeKabelSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("ArahAntenaSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("StatusHasilSurvey"));
-                                                Log.i(TAG, "data_Survey_Open: "+ data.getString("KeteranganSurvey"));
+                                                Log.i(TAG, "data_Survey_Open1: " + data.getString("AlamatPengirimanSurvey"));
+                                                Log.i(TAG, "data_Survey_Open2: " + data.getString("TempatPenyimpananSurvey"));
+                                                Log.i(TAG, "data_Survey_Open3: " + data.getString("NamaPICSurvey"));
+                                                Log.i(TAG, "data_Survey_Open4: "+ data.getString("KontakPICSurvey"));
+                                                Log.i(TAG, "data_Survey_Open5: "+ data.getString("PenempatanGroundingSurvey"));
+                                                Log.i(TAG, "data_Survey_Open6: "+ data.getString("UkuranAntenaSurvey"));
+                                                Log.i(TAG, "data_Survey_Open7: "+ data.getString("TempatAntenaSurvey"));
+                                                Log.i(TAG, "data_Survey_Open8: "+ data.getString("KekuatanRoofSurvey"));
+                                                Log.i(TAG, "data_Survey_Open9: "+ data.getString("JenisMountingSurvey"));
+                                                Log.i(TAG, "data_Survey_Open10: "+ data.getString("LatitudeSurvey"));
+                                                Log.i(TAG, "data_Survey_Open11: "+ data.getString("LongitudeSurvey"));
+                                                Log.i(TAG, "data_Survey_Open12: "+ data.getString("ListrikAwalSurvey"));
+                                                Log.i(TAG, "data_Survey_Open13: "+ data.getString("SarpenACIndoorSurvey"));
+                                                Log.i(TAG, "data_Survey_Open14: "+ data.getString("SarpenUPSSurvey"));
+                                                Log.i(TAG, "data_Survey_Open15: "+ data.getString("PanjangKabelSurvey"));
+                                                Log.i(TAG, "data_Survey_Open16: "+ data.getString("TypeKabelSurvey"));
+                                                Log.i(TAG, "data_Survey_Open17: "+ data.getString("ArahAntenaSurvey"));
+                                                Log.i(TAG, "data_Survey_Open18: "+ data.getString("StatusHasilSurvey"));
+                                                Log.i(TAG, "data_Survey_Open19: "+ data.getString("KeteranganSurvey"));
 
                                                 if (data.getString("AlamatPengirimanSurvey").equals("null") || data.getString("AlamatPengirimanSurvey").equals(null)|| data.getString("AlamatPengirimanSurvey").equals("")){
                                                     String alamatPengiriman = "";
