@@ -48,8 +48,6 @@ public class BarangTerpasangAdapter extends RecyclerView.Adapter<BarangTerpasang
         Picasso.with(context)
                 .load(BaseUrl.getPublicIp + localFoto + data.getFileUrl())
                 .into(viewHolder.mImageView);
-
-
     }
 
     @Override
