@@ -204,18 +204,34 @@ public class UploadPhotoActivity extends AppCompatActivity {
                     return headers;
                 }
 
+//                //todo diganti
+//                @Override
+//                public byte[] getBody() {
+//                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM2\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagUploadPhoto\": "+statusUp+"}],\"PARAM1\": [{\"file_url\": \"UploadFoto/"+nameImage+"\",\"file_usercreate\": \"admin\",\"flagtime\":\""+time+"\",\"VID\": \""+vid+"\",\"Description\": \""+descrip+"\",\"Keterangan\": \""+keterangan+"\",\"YourImage64Name\": \""+nameImage+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+//                    Log.i("sendRaw", "sendRaw: " + str);
+//                    return str.getBytes();
+//                }
+//
+//                public String getBodyContentType()
+//                {
+//                    return "application/x-www-form-urlencoded; charset=utf-8";
+//                }
                 @Override
-                public byte[] getBody() {
-                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM2\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagUploadPhoto\": "+statusUp+"}],\"PARAM1\": [{\"file_url\": \"UploadFoto/"+nameImage+"\",\"file_usercreate\": \"admin\",\"flagtime\":\""+time+"\",\"VID\": \""+vid+"\",\"Description\": \""+descrip+"\",\"Keterangan\": \""+keterangan+"\",\"YourImage64Name\": \""+nameImage+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
-                    Log.i("sendRaw", "sendRaw: " + str);
-                    return str.getBytes();
-                }
+                protected Map<String, String> getParams(){
+                    Map<String, String>  params = new HashMap<>();
+                    params.put("VID",vid.trim());
+                    params.put("NoTask",noTask.trim());
+                    params.put("FlagUploadPhoto","true");
+                    params.put("UploadFoto",nameImage.trim());
+                    params.put("file_usercreate","admin");
+                    params.put("flagtime",time);
+                    params.put("Description",descrip.trim());
+                    params.put("Keterangan",keterangan.trim());
+                    params.put("YourImage64Name",nameImage.trim());
+                    params.put("YourImage64File",encodedImage.trim());
 
-                public String getBodyContentType()
-                {
-                    return "application/x-www-form-urlencoded; charset=utf-8";
+                    return params;
                 }
-
             };
 
             Mysingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
