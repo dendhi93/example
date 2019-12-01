@@ -221,7 +221,7 @@ public class UploadPhotoActivity extends AppCompatActivity {
                     Map<String, String>  params = new HashMap<>();
                     params.put("VID",vid.trim());
                     params.put("NoTask",noTask.trim());
-                    params.put("FlagUploadPhoto","true");
+                    params.put("FlagUploadPhoto","True");
                     params.put("UploadFoto",nameImage.trim());
                     params.put("file_usercreate","admin");
                     params.put("flagtime",time);
@@ -229,7 +229,9 @@ public class UploadPhotoActivity extends AppCompatActivity {
                     params.put("Keterangan",keterangan.trim());
                     params.put("YourImage64Name",nameImage.trim());
                     params.put("YourImage64File",encodedImage.trim());
-
+                    Log.d("### ","VID " +vid+"~ NoTask "+noTask+"~ FlagUploadPhoto : true ~ UploadFoto "+nameImage+
+                            "~file_usercreate : admin ~ flagtime : " + time + "~Description "+descrip+"~ Keterangan " +descrip+
+                            "~ YourImage64Name " +nameImage+" ~ YourImage64File " +encodedImage);
                     return params;
                 }
             };
