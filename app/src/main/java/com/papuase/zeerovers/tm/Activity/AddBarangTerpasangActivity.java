@@ -158,17 +158,41 @@ public class AddBarangTerpasangActivity extends AppCompatActivity {
                 return headers;
             }
 
-            @Override
-            public byte[] getBody() {
-//                String str = "{\"Result\":\"True\",\"Raw\":[{\"PARAM1\": [{\"VID\":\""+vid+"\",\"NamaBarang\":\""+barang+"\",\"Type\":\""+model+"\",\"SN\":\""+sn+"\",\"IPlan\":\""+ipLan+"\",\"Status\":\""+status+"\",\"DateCreate\":\"2018-09-28\",\"UserCreate\":\"BRISAT\"}],\"PARAM2\":[{\"file_url\":\"UploadFoto/"+nameFile+"\",\"file_usercreate\":\"admin\",\"file_datecreate\":\"2018-09-28\",\"VID\":\""+vid+"\",\"Description\":\""+barang+"\",\"Keterangan\":\""+catatan+"\",\"YourImage64Name\":\""+nameFile+"\",\"YourImage64File\":\""+encodedImage+"\"}],\"Data1\":\"\",\"Data2\":\"\",\"Data3\":\"\",\"Data4\":\"\",\"Data5\":\"\",\"Data6\":\"\",\"Data7\":\"\",\"Data8\":\"\",\"Data9\":\"\",\"Data10\":\"\"}]}";
-                String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\": [{\"VID\": \""+vid+"\",\"NamaBarang\": \""+barang+"\",\"Type\": \""+model+"\",\"SN\": \""+sn+"\",\"IPlan\": \""+ipLan+"\",\"Status\": \""+status+"\",\"DateCreate\": \""+date+"\",\"UserCreate\": \"BRISAT\"}],\"PARAM3\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagDataBarang\": "+statusBt+"}],\"PARAM2\": [{\"file_url\": \"UploadFoto/"+nameFile+"\",\"file_usercreate\": \"admin\",\"file_datecreate\": \""+date+"\",\"VID\": \""+vid+"\",\"Description\": \""+barang+"\",\"Keterangan\": \""+sn+"\",\"YourImage64Name\": \""+nameFile+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
-                Log.i("str", "strRaw: " + str);
-                return str.getBytes();
-            }
+//            @Override
+//            public byte[] getBody() {
+////                String str = "{\"Result\":\"True\",\"Raw\":[{\"PARAM1\": [{\"VID\":\""+vid+"\",\"NamaBarang\":\""+barang+"\",\"Type\":\""+model+"\",\"SN\":\""+sn+"\",\"IPlan\":\""+ipLan+"\",\"Status\":\""+status+"\",\"DateCreate\":\"2018-09-28\",\"UserCreate\":\"BRISAT\"}],\"PARAM2\":[{\"file_url\":\"UploadFoto/"+nameFile+"\",\"file_usercreate\":\"admin\",\"file_datecreate\":\"2018-09-28\",\"VID\":\""+vid+"\",\"Description\":\""+barang+"\",\"Keterangan\":\""+catatan+"\",\"YourImage64Name\":\""+nameFile+"\",\"YourImage64File\":\""+encodedImage+"\"}],\"Data1\":\"\",\"Data2\":\"\",\"Data3\":\"\",\"Data4\":\"\",\"Data5\":\"\",\"Data6\":\"\",\"Data7\":\"\",\"Data8\":\"\",\"Data9\":\"\",\"Data10\":\"\"}]}";
+//                String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\": [{\"VID\": \""+vid+"\",\"NamaBarang\": \""+barang+"\",\"Type\": \""+model+"\",\"SN\": \""+sn+"\",\"IPlan\": \""+ipLan+"\",\"Status\": \""+status+"\",\"DateCreate\": \""+date+"\",\"UserCreate\": \"BRISAT\"}],\"PARAM3\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagDataBarang\": "+statusBt+"}],\"PARAM2\": [{\"file_url\": \"UploadFoto/"+nameFile+"\",\"file_usercreate\": \"admin\",\"file_datecreate\": \""+date+"\",\"VID\": \""+vid+"\",\"Description\": \""+barang+"\",\"Keterangan\": \""+sn+"\",\"YourImage64Name\": \""+nameFile+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+//                Log.i("str", "strRaw: " + str);
+//                return str.getBytes();
+//            }
+//
+//            public String getBodyContentType()
+//            {
+//                return "application/x-www-form-urlencoded; charset=utf-8";
+//            }
 
-            public String getBodyContentType()
-            {
-                return "application/x-www-form-urlencoded; charset=utf-8";
+            @Override
+            protected Map<String, String> getParams(){
+                Map<String, String>  params = new HashMap<>();
+                params.put("VID",vid.trim());
+                params.put("NamaBarang",barang.trim());
+                params.put("Type",model.trim());
+                params.put("SN",sn.trim());
+                params.put("IPlan",ipLan.trim());
+                params.put("Status",status.trim());
+                params.put("DateCreate",date.trim());
+                params.put("UserCreate","BRISAT");
+                params.put("NoTask",noTask.trim());
+                params.put("FlagDataBarang","true");
+                params.put("UploadFoto",nameFile.trim());
+                params.put("file_usercreate","admin");
+                params.put("file_datecreate",date.trim());
+                params.put("Description",barang.trim());
+                params.put("Keterangan",sn.trim());
+                params.put("YourImage64Name",nameFile.trim());
+                params.put("YourImage64File",encodedImage.trim());
+
+                return params;
             }
 
         };
