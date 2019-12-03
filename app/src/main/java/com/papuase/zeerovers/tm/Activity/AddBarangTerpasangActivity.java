@@ -184,13 +184,18 @@ public class AddBarangTerpasangActivity extends AppCompatActivity {
                 params.put("UserCreate","BRISAT");
                 params.put("NoTask",noTask.trim());
                 params.put("FlagDataBarang","true");
-                params.put("UploadFoto",nameFile.trim());
+                params.put("UploadFoto",noTask.trim());
                 params.put("file_usercreate","admin");
                 params.put("file_datecreate",date.trim());
                 params.put("Description",barang.trim());
                 params.put("Keterangan",sn.trim());
                 params.put("YourImage64Name",nameFile.trim());
                 params.put("YourImage64File",encodedImage.trim());
+                Log.d("###","VID " +vid+ " ~ NamaBarang " +barang+ "~ Type "+model+
+                        "~ SN " +sn+ " ~ IPlan " +ipLan+ "~ Status " +status+ "~ DateCreate " +date+
+                    "~ UserCreate BRISAT ~ NoTask " +noTask+ "~ FlagDataBarang true ~ UploadFoto " +noTask+
+                        "file_usercreate admin ~ file_datecreate " +date+ "~ Description " +barang+
+                        "~ Keterangan " +sn+ " ~ YourImage64Name " +nameFile+ " ~ YourImage64File " +encodedImage);
 
                 return params;
             }
