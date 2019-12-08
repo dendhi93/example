@@ -740,7 +740,6 @@ public class TaskDetailActivity extends AppCompatActivity {
 
             Mysingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
 
-
     }
 
 
