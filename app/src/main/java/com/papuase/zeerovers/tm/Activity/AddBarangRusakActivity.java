@@ -159,7 +159,12 @@ public class AddBarangRusakActivity extends AppCompatActivity {
 
             @Override
             public byte[] getBody() {
-                String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\": [{\"VID\": \""+vid+"\",\"NamaBarang\": \""+barang+"\",\"Type\": \""+model+"\",\"SN\": \""+sn+"\",\"IPlan\": \""+ipLan+"\",\"Status\": \""+status+"\",\"DateCreate\": \""+date+"\",\"UserCreate\": \"BRISAT\"}],\"PARAM3\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagDataBarang\": "+statusBt+"}],\"PARAM2\": [{\"file_url\": \"UploadFoto/"+nameFile+"\",\"file_usercreate\": \"admin\",\"file_datecreate\": \""+date+"\",\"VID\": \""+vid+"\",\"Description\": \""+barang+"\",\"Keterangan\": \""+sn+"\",\"YourImage64Name\": \""+nameFile+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+//                String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\": [{\"VID\": \""+vid+"\",\"NamaBarang\": \""+barang+"\",\"Type\": \""+model+"\",\"SN\": \""+sn+"\",\"IPlan\": \""+ipLan+"\",\"Status\": \""+status+"\",\"DateCreate\": \""+date+"\",\"UserCreate\": \"BRISAT\"}],\"PARAM3\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagDataBarang\": "+statusBt+"}],\"PARAM2\": [{\"file_url\": \"UploadFoto/"+nameFile+"\",\"file_usercreate\": \"admin\",\"file_datecreate\": \""+date+"\",\"VID\": \""+vid+"\",\"Description\": \""+barang+"\",\"Keterangan\": \""+sn+"\",\"YourImage64Name\": \""+nameFile+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+                String str = "{\"VID\":\""+vid.trim()+"\",\"NamaBarang\":\""+barang.trim()+
+                        "\",\"Type\":\""+model.trim()+"\",\"SN\":\""+sn.trim()+
+                        "\",\"IPlan\":\""+ipLan.trim()+"\",\"NoTask\":\""+noTask.trim()+
+                        "\",\"Description\":\""+barang.trim()+"\",\"Keterangan\":\""+sn.trim()+"\",\"YourImage64Name\":\""+nameFile.trim()+"\"," +
+                        "\"YourImage64File\":\""+encodedImage.trim()+"\"}";
                 Log.i("str", "strRaw: " + str);
                 return str.getBytes();
             }
