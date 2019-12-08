@@ -133,7 +133,6 @@ public class UploadPhotoActivity extends AppCompatActivity {
 
     private void UploadFoto() {
         String url = BaseUrl.getPublicIp + BaseUrl.insetFoto;
-        Log.i(TAG, "UploadFoto Url: " + url);
 
         @SuppressLint("SimpleDateFormat")
         DateFormat dt = new SimpleDateFormat("HH:mm:ss");
@@ -204,35 +203,17 @@ public class UploadPhotoActivity extends AppCompatActivity {
                     return headers;
                 }
 
-//                //todo diganti
-//                @Override
-//                public byte[] getBody() {
-//                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM2\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagUploadPhoto\": "+statusUp+"}],\"PARAM1\": [{\"file_url\": \"UploadFoto/"+nameImage+"\",\"file_usercreate\": \"admin\",\"flagtime\":\""+time+"\",\"VID\": \""+vid+"\",\"Description\": \""+descrip+"\",\"Keterangan\": \""+keterangan+"\",\"YourImage64Name\": \""+nameImage+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
-//                    Log.i("sendRaw", "sendRaw: " + str);
-//                    return str.getBytes();
-//                }
-//
-//                public String getBodyContentType()
-//                {
-//                    return "application/x-www-form-urlencoded; charset=utf-8";
-//                }
                 @Override
-                protected Map<String, String> getParams(){
-                    Map<String, String>  params = new HashMap<>();
-                    params.put("VID",vid.trim());
-                    params.put("NoTask",noTask.trim());
-                    params.put("FlagUploadPhoto","True");
-                    params.put("UploadFoto",noTask.trim());
-                    params.put("file_usercreate","admin");
-                    params.put("flagtime",time);
-                    params.put("Description",descrip.trim());
-                    params.put("Keterangan",keterangan.trim());
-                    params.put("YourImage64Name",nameImage.trim());
-                    params.put("YourImage64File",encodedImage.trim());
-                    Log.d("### ","VID " +vid+"~ NoTask "+noTask+"~ FlagUploadPhoto : True ~ UploadFoto "+noTask+
-                            "~file_usercreate : admin ~ flagtime : " + time + "~Description "+descrip+"~ Keterangan " +descrip+
-                            "~ YourImage64Name " +nameImage+" ~ YourImage64File " +encodedImage);
-                    return params;
+                public byte[] getBody() {
+//                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM2\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagUploadPhoto\": "+statusUp+"}],\"PARAM1\": [{\"file_url\": \"UploadFoto/"+nameImage+"\",\"file_usercreate\": \"admin\",\"flagtime\":\""+time+"\",\"VID\": \""+vid+"\",\"Description\": \""+descrip+"\",\"Keterangan\": \""+keterangan+"\",\"YourImage64Name\": \""+nameImage+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+                    String str = "{\"VID\":\""+vid.trim()+"\",\"FlagUploadPhoto\": \"True\",\"NoTask\":\""+noTask.trim()+"\",\"file_usercreate\" : \"admin\" , \"flagtime\" : \""+time.trim()+"\", \"Description\" : \""+descrip.trim()+"\", \"Keterangan\" : \""+keterangan.trim()+"\", \"YourImage64Name\" : \""+nameImage.trim()+"\", \"YourImage64File\" : \""+encodedImage.trim()+"\"}";
+                    Log.i("sendRaw", "sendRaw: " + str);
+                    return str.getBytes();
+                }
+
+                public String getBodyContentType()
+                {
+                    return "application/x-www-form-urlencoded; charset=utf-8";
                 }
             };
 
