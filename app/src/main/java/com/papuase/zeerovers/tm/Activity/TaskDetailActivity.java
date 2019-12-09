@@ -32,6 +32,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -675,8 +677,8 @@ public class TaskDetailActivity extends AppCompatActivity {
 
         String url = BaseUrl.getPublicIp + BaseUrl.updateDataTask;
         Log.i("url", "Data Lokasi: "+ url);
-        String statusTask = "4";
-        Log.i("GetVID", "updateDataLokasi: " + id);
+        String statusTask = "finish";
+        Log.i("GetVID", "supdateDataLokasi: " + id);
             StringRequest request = new StringRequest(Request.Method.POST, url,
                     new Response.Listener<String>() {
                         @Override
@@ -726,8 +728,9 @@ public class TaskDetailActivity extends AppCompatActivity {
 
                 @Override
                 public byte[] getBody() {
-//                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\":[{\"WhereDatabaseinYou\":\"NoListTask=\'"+id+"\'\",\"IdStatusPerbaikan\":\""+statisTask+"\"}],\"Data1\":\"\",\"Data2\":\"\",\"Data3\":\"\",\"Data4\":\"\",\"Data5\":\"\",\"Data6\":\"\",\"Data7\":\"\",\"Data8\":\"\",\"Data9\":\"\",\"Data10\":\"\"}]}";
-                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\": [{\"WhereDatabaseinYou\": \"NoListTask = '"+id+"'\",\"VID\":\""+vid+"\",\"IdStatusPerbaikan\": \""+statusTask+"\",\"DateUpdate\": \"2018-09-28\",\"UserUpdate\": \"MARTADINATA\"}],\"PARAM2\": [{\"WhereDatabaseinYou\": \"NoTask = '"+noTask+"'\",\"IdStatusTask\": \""+statusTask+"\",\"DateStamp\": \"2018-09-28\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+                     String dt = new SimpleDateFormat("yyy-MM-dd", java.util.Locale.getDefault()).format(new Date());
+//                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM1\": [{\"WhereDatabaseinYou\": \"NoListTask = '"+id+"'\",\"VID\":\""+vid+"\",\"IdStatusPerbaikan\": \""+statusTask+"\",\"DateUpdate\": \"2018-09-28\",\"UserUpdate\": \"MARTADINATA\"}],\"PARAM2\": [{\"WhereDatabaseinYou\": \"NoTask = '"+noTask+"'\",\"IdStatusTask\": \""+statusTask+"\",\"DateStamp\": \"2018-09-28\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
+                    String str = "{\"NoListTask\":\""+id.trim()+"\",\"VID\":\""+vid.trim()+"\",\"IdStatusPerbaikan\":\""+statusTask.trim()+"\",\"NoTask\":\""+noTask.trim()+"\",\"UserUpdate\":\""+sharedPrefManager.getSPUserName()+"\",\"DateStamp\":\""+dt.trim()+"\",\"DateUpdate\":\""+dt.trim()+"\"}";
                     Log.i("sendBody", "sendBody: " + str);
                     return str.getBytes();
                 }
