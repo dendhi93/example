@@ -206,7 +206,7 @@ public class UploadPhotoActivity extends AppCompatActivity {
                 @Override
                 public byte[] getBody() {
 //                    String str = "{\"Result\": \"True\",\"Raw\": [{\"PARAM2\": [{\"WhereDatabaseinYou\": \"VID='"+vid+"' and NoTask = '"+noTask+"'\",\"FlagUploadPhoto\": "+statusUp+"}],\"PARAM1\": [{\"file_url\": \"UploadFoto/"+nameImage+"\",\"file_usercreate\": \"admin\",\"flagtime\":\""+time+"\",\"VID\": \""+vid+"\",\"Description\": \""+descrip+"\",\"Keterangan\": \""+keterangan+"\",\"YourImage64Name\": \""+nameImage+"\",\"YourImage64File\": \""+encodedImage+"\"}],\"Data1\": \"\",\"Data2\": \"\",\"Data3\": \"\",\"Data4\": \"\",\"Data5\": \"\",\"Data6\": \"\",\"Data7\": \"\",\"Data8\": \"\",\"Data9\": \"\",\"Data10\": \"\"}]}";
-                    String str = "{\"VID\":\""+vid.trim()+"\",\"FlagUploadPhoto\": \"True\",\"NoTask\":\""+noTask.trim()+"\",\"file_usercreate\" : \"admin\" , \"flagtime\" : \""+time.trim()+"\", \"Description\" : \""+descrip.trim()+"\", \"Keterangan\" : \""+keterangan.trim()+"\", \"YourImage64Name\" : \""+nameImage.trim()+"\", \"YourImage64File\" : \""+encodedImage.trim()+"\"}";
+                    String str = "{\"VID\":\""+vid.trim()+"\",\"FlagUploadPhoto\": \"true\",\"NoTask\":\""+noTask.trim()+"\",\"file_usercreate\" : \"admin\" , \"flagtime\" : \""+time.trim()+"\", \"Description\" : \""+descrip.trim()+"\", \"Keterangan\" : \""+keterangan.trim()+"\", \"YourImage64Name\" : \""+nameImage.trim()+"\", \"YourImage64File\" : \""+encodedImage.trim()+"\"}";
                     Log.i("sendRaw", "sendRaw: " + str);
                     return str.getBytes();
                 }

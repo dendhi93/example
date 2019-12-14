@@ -497,7 +497,6 @@ public class GeneralInfoActivity extends AppCompatActivity {
                                 ResultWS = jsonResponse.getString("Result");
                                 if (ResultWS.equals("True")){
                                     String Data1 = jsonResponse.getString("Data1");
-                                    sharedPrefDataTask.saveGeneralInfo();
                                     Toasty.success(GeneralInfoActivity.this, "Success!", Toast.LENGTH_SHORT, true).show();
                                     Log.i("TAG", "onResponse: " + Data1);
 

@@ -110,20 +110,7 @@ public class SharedPrefDataTask {
         spEditor.apply();
     }
 
-    public void saveDataLokasi(){
-        spEditor.putString(statusDataBarang, "true");
-        spEditor.apply();
-    }
 
-    public void saveGeneralInfo(){
-        spEditor.putString(statusGeneralInfo, "true");
-        spEditor.apply();
-    }
-
-    public void saveDataTeknis(){
-        spEditor.putString(statusDataTeknis, "true");
-        spEditor.apply();
-    }
 
     public String getVIDDATABARANGSAVE() {
         return sp.getString(VIDDATABARANGSAVE,"");
