@@ -196,8 +196,6 @@ public class BarangTerpasangFragment extends Fragment {
                                         mProgress.setVisibility(View.GONE);
                                         recyclerView.setVisibility(View.GONE);
                                     }
-
-
                                 } catch (JSONException e) {
                                     e.printStackTrace();
                                     Log.i(TAG, "JSONException : " + e.getMessage());
@@ -234,8 +232,6 @@ public class BarangTerpasangFragment extends Fragment {
 
         Mysingleton.getInstance(getActivity()).addToRequestQueue(request);
     }
-
-
 }
 
 

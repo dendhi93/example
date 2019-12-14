@@ -682,6 +682,7 @@ public class DataTeknisiActivity extends AppCompatActivity {
 
                                     String Data1 = jsonResponse.getString("Data1");
                                     Log.i("TAG", "onResponse: " + Data1);
+                                    sharedPrefDataTask.saveDataTeknis();
                                     Toasty.success(DataTeknisiActivity.this, "Success!", Toast.LENGTH_SHORT, true).show();
                                     Log.i("TAG","Ski data from server - ok" + response );
                                     Intent intent = new Intent(getApplicationContext(), TaskDetailActivity.class)

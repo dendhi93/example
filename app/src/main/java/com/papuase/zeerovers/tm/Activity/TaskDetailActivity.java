@@ -570,7 +570,7 @@ public class TaskDetailActivity extends AppCompatActivity {
         String statusUploadPhoto = sharedPrefDataTask.getStatusUploadPhoto();
 
         if (StatusTask.equals("1")){
-
+                Log.d("###","statusDataLokasi " +statusDataLokasi+ " ~ statusGeneralInfo " +statusGeneralInfo+ " ~ statusDataTeknis " +statusDataTeknis);
             if (statusDataLokasi.equals("true") && statusGeneralInfo.equals("true") && statusDataTeknis.equals("true")
                     && statusDataBarang.equals("true") && statusUploadPhoto.equals("true")){
                 Toasty.success(this, "Data Sudah Lengkap", Toast.LENGTH_SHORT, true).show();
