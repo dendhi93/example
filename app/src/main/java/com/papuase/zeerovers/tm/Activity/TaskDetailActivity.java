@@ -324,8 +324,6 @@ public class TaskDetailActivity extends AppCompatActivity {
                                                     statusDataLokasi.setBackgroundResource(R.color.colorGreen500);
                                                     statusGeneralInfo.setBackgroundResource(R.color.colorGreen500);
 
-
-
                                                     mNamaRemote.setText(namaRemote);
                                                     mSid.setText(id);
                                                     mNamaPic.setText(namaPic);

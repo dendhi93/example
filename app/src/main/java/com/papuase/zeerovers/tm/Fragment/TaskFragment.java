@@ -164,7 +164,7 @@ public class TaskFragment extends Fragment {
 
                                     final String countOpen = data.getString("tot");
                                     final String statusOpen = data.getString("Status");
-                                    mStatusOpen.setText(statusOpen);
+//                                    mStatusOpen.setText(statusOpen);
                                     mCountOpen.setText(countOpen);
                                 }
                                 mAdapter.notifyDataSetChanged();
@@ -237,7 +237,7 @@ public class TaskFragment extends Fragment {
 
                                             final String countFinish = data.getString("tot");
                                             final String statusFinish = data.getString("Status");
-                                            mStatusFinish.setText(statusFinish);
+//                                            mStatusFinish.setText(statusFinish);
                                             mCountFinish.setText(countFinish);
                                         }
                                         mAdapter.notifyDataSetChanged();
