@@ -71,15 +71,9 @@ public class LoginActivity extends AppCompatActivity {
                     .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
             finish();
         }
-
 //        dummyLogin();
-
     }
 
-    private void dummyLogin() {
-        mUsernameEditText.setText("zeerovers");
-        mPasswordEditText.setText("tm12345");
-    }
 
     public void loginBtn(View view) {
         Animation fadein = new AlphaAnimation(0,1);
@@ -141,17 +135,16 @@ public class LoginActivity extends AppCompatActivity {
                                                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                         startActivity(intent);
                                         finish();
-
                                     }
 
                                 }else {
-                                    Toasty.error(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT, true).show();
+                                    String failedReason = paramObject.getString("Raw");
+                                    Toasty.error(LoginActivity.this, "Login Failed\n"+failedReason, Toast.LENGTH_SHORT, true).show();
                                 }
 
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
-
                         }
                     },
                     new Response.ErrorListener() {
@@ -168,7 +161,6 @@ public class LoginActivity extends AppCompatActivity {
                         headers.put("Header", "Dota2");
                         return headers;
                 }
-
             };
 
             Mysingleton.getInstance(getApplicationContext()).addToRequestQueue(request);
@@ -182,7 +174,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         if(password == null || password.trim().length() == 0){
             Toasty.warning(LoginActivity.this, "Password is required!", Toast.LENGTH_SHORT, true).show();
-
             return false;
         }
         return true;
@@ -196,7 +187,6 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), ForgotPasswordActivity.class)
                 .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
-
     }
 
     public void singUp(View view) {
@@ -206,7 +196,6 @@ public class LoginActivity extends AppCompatActivity {
         singUp.startAnimation(fadein);
         Toasty.info(this, "Contact Admin", Toast.LENGTH_SHORT, true).show();
     }
-
 
     @Override public void onResume(){
         super.onResume();

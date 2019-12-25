@@ -301,8 +301,8 @@ public class TaskDetailActivity extends AppCompatActivity {
                                                     mDataTeknisi.setVisibility(View.VISIBLE);
                                                     mDataBarang.setVisibility(View.VISIBLE);
                                                     mDataInstalasi.setVisibility(View.VISIBLE);
-                                                    viewDataSurvey.setVisibility(View.GONE);
-                                                    mDataSurvey.setVisibility(View.GONE);
+//                                                    viewDataSurvey.setVisibility(View.GONE);
+//                                                    mDataSurvey.setVisibility(View.GONE);
                                                     mUploadPhoto.setVisibility(View.VISIBLE);
                                                 }
                                                 if (statusTask.equals("4")) {
@@ -333,8 +333,8 @@ public class TaskDetailActivity extends AppCompatActivity {
                                                     mDataTeknisi.setVisibility(View.VISIBLE);
                                                     mDataBarang.setVisibility(View.VISIBLE);
                                                     mDataInstalasi.setVisibility(View.VISIBLE);
-                                                    viewDataSurvey.setVisibility(View.GONE);
-                                                    mDataSurvey.setVisibility(View.GONE);
+//                                                    viewDataSurvey.setVisibility(View.GONE);
+//                                                    mDataSurvey.setVisibility(View.GONE);
                                                     mUploadPhoto.setVisibility(View.VISIBLE);
                                                 }
 
@@ -472,8 +472,8 @@ public class TaskDetailActivity extends AppCompatActivity {
                                                     mDataBarang.setVisibility(View.VISIBLE);
                                                     viewDataInstalasi.setVisibility(View.GONE);
                                                     mDataInstalasi.setVisibility(View.GONE);
-                                                    viewDataSurvey.setVisibility(View.GONE);
-                                                    mDataSurvey.setVisibility(View.GONE);
+//                                                    viewDataSurvey.setVisibility(View.GONE);
+//                                                    mDataSurvey.setVisibility(View.GONE);
                                                     mUploadPhoto.setVisibility(View.VISIBLE);
                                                 }
                                                 if (statusTask.equals("4")) {
@@ -505,8 +505,8 @@ public class TaskDetailActivity extends AppCompatActivity {
                                                     mDataBarang.setVisibility(View.VISIBLE);
                                                     viewDataInstalasi.setVisibility(View.GONE);
                                                     mDataInstalasi.setVisibility(View.GONE);
-                                                    viewDataSurvey.setVisibility(View.GONE);
-                                                    mDataSurvey.setVisibility(View.GONE);
+//                                                    viewDataSurvey.setVisibility(View.GONE);
+//                                                    mDataSurvey.setVisibility(View.GONE);
                                                     mUploadPhoto.setVisibility(View.VISIBLE);
                                                 }
                                             }
@@ -517,7 +517,6 @@ public class TaskDetailActivity extends AppCompatActivity {
                                             mKonfirmasiFinish.setVisibility(View.VISIBLE);
 
                                         }
-
 
                                     }else {
                                         mProgress.setVisibility(View.GONE);
@@ -568,7 +567,7 @@ public class TaskDetailActivity extends AppCompatActivity {
         String statusUploadPhoto = sharedPrefDataTask.getStatusUploadPhoto();
 
         if (StatusTask.equals("1")){
-                Log.d("###","statusDataLokasi " +statusDataLokasi+ " ~ statusGeneralInfo " +statusGeneralInfo+ " ~ statusDataTeknis " +statusDataTeknis);
+            Log.d("###","" +statusDataLokasi+ " ~ statusGeneralInfo " + statusGeneralInfo + " ~ ");
             if (statusDataLokasi.equals("true") && statusGeneralInfo.equals("true") && statusDataTeknis.equals("true")
                     && statusDataBarang.equals("true") && statusUploadPhoto.equals("true")){
                 Toasty.success(this, "Data Sudah Lengkap", Toast.LENGTH_SHORT, true).show();
